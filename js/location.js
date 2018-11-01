@@ -1,3 +1,5 @@
+var check = 0;
+
 function myFunction() {
   var input, filter, ul, li, a, i;
 
@@ -23,5 +25,15 @@ function myFunction() {
             li[i].style.display = "none";
         }
     }
+  }
+}
+
+function darkClick (elmnt) {
+  if (check == 0) {
+    elmnt.style.color = 'blue';
+    check = check + 1;
+  } else {
+    elmnt.style.color = 'black';
+    check = check - 1;
   }
 }
