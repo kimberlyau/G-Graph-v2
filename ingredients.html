@@ -19,21 +19,22 @@
         </div>
 
         <h1>Your List</h1>
-        <div id="list">
-        </div>
+
+        <div id="list"></div>
 
         <form class="form-inline mr-auto">
             <div class="input-group mb-2 mr-sm-2">
-                    
-            <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Search Ingredients">
-            <div class="input-group-append">
-                    <button type="button" class="btn btn-success">
-                        <i class="fas fa-plus"></i>
-                    </button>
-            </div>      
+                <input type="text" class="form-control" id="search" placeholder="Search Ingredients" onkeyup="filterResults()">
+                <div class="input-group-append">
+                        <button type="button" class="btn btn-success" onclick="updateResults()">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                </div>      
             </div>
            
         </form>
+
+        <ul id="myUL"></ul>
        
         <a href="location.html">
             <button type="button" class="btn btn-outline-secondary">
