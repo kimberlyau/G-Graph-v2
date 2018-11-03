@@ -36,6 +36,7 @@ function updateResults(){
       show[index] = true;
     }
     displayIngredients();
+    filterResults();
     search.value = "";
   }
 }
@@ -49,12 +50,21 @@ function displayIngredients(){
       + '<button type="button" class="btn btn-light" disabled>'
       + myList[i]
       + '</button>'
-      + ' <button type="button" class="btn btn-danger">'
+      + ' <button id="'
+      + i
+      + '" type="button" class="btn btn-danger right" onclick="deleteItem(this)">'
       + '<i class="fas fa-minus"></i>'
       + '</button>'
       + '</div>';
       list.innerHTML += addToList;
   }
+}
+function deleteItem(elem){
+  var getItem = $(elem).attr('id');
+  var index = myList.indexOf(getItem);
+  myList.splice(index, 1);
+  show[index]=false;
+  displayIngredients();
 }
 
 function filterResults(){
@@ -77,7 +87,8 @@ function filterResults(){
     for (i = 0; i < li.length; i++) {
         a = li[i].getElementsByTagName("a")[0];
         // Have to remove <br>, bold tags
-        if (a.innerHTML.replace('<br>', '').replace('<b>', '').replace('</b>', '').toUpperCase().indexOf(filter) > -1) {
+        if (a.innerHTML.replace('<br>', '').replace('<b>', '').replace('</b>', '').toUpperCase().indexOf(filter) > -1
+          && show[i] === false) {
             li[i].style.display = "block";
         } else {
             li[i].style.display = "none";
