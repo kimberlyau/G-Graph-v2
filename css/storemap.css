@@ -1,4 +1,54 @@
-.map{
-    max-width: 80%;
-    /* margin-right: 20% */
+body {
+  margin-left: 7.5%;
+  margin-right: 7.5%;
+}
+
+label {
+  padding-bottom: -10px;
+}
+
+.navibar {
+  text-align: right;
+  margin-top: 5%;
+  font-size: 175%;
+}
+
+.anyClass {
+  height: 100px;
+  overflow-y: scroll;
+}
+
+.fa-map-pin {
+  font-size: 170%;
+}
+
+#map {
+  background-image: url("../images/generic_map.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-position: top;
+  overflow: auto;
+
+}
+
+#list {
+  /* padding-top: 200px; */
+  clear: both;
+  margin: 18em 0 0;
+}
+
+
+/* Pins */
+#item1 {
+  padding-left: 25px;
+  padding-top: 40px;
+}
+#item2 {
+  padding-left: 200px;
+}
+
+#item1:hover {
+  font-size: 180%;
+  color: green;
 }

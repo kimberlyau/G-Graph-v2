@@ -26,34 +26,35 @@
 </head>
 
 <body>
-    <div className="StartScreen">
-        <h1> Welcome to G-Graph! </h1>
-        <h3> Here to make your grocery shopping a brezze! </h3>
-        <br>
+    <div className="Signup">
+        <h1> Create New Account </h1>
 
         <form>
             <div class="input-container">
-                <i class="fa fa-user icon"></i>
+                <input class="input-field" type="text" placeholder="Name" name="name">
+            </div>
+
+            <div class="input-container">
                 <input class="input-field" type="text" placeholder="Email" name="email">
             </div>
+
             <div class="input-container">
-                <i class="fa fa-lock icon"></i>
                 <input class="input-field" type="password" placeholder="Password" name="password">
+            </div>
+            
+            <div class="input-container">
+                <input class="input-field" type="password" placeholder="Confirm Password" name="password">
             </div>
             <br>
         </form>
 
+
         <a href="lists.html">
             <button type="button" class="btn btn-outline-secondary" id="back">
-                Sign In
-                <i class="fas fa-arrow-right"></i>
+                Create Account!
             </button>
         </a>
 
-        <br>
-        <a href="signup.html">
-            New? Register for an account!
-        </a>
     </div>
 </body>
 
