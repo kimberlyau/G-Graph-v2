@@ -62,3 +62,24 @@ li {
 #myUL li a:hover:not(.header) {
   background-color: #eee;
 }
+
+.input-container {
+  display: flex;
+  width: 100%;
+  margin-bottom: 10px;
+  border: 2px solid dodgerblue;
+}
+
+.icon {
+  padding: 15px;
+  background: dodgerblue;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+}
