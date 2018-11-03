@@ -16,15 +16,15 @@
   <body>
     <!-- Navbar -->
     <div class="navibar">
-      <a class="fas fa-home" id="icon"></a>
-      <a class="fas fa-cog" id="icon"></a>
+      <a class="fas fa-home" id="icon" href="index.html"></a>
+      <!-- <a class="fas fa-cog" id="icon"></a> -->
     </div>
 
     <div>
       <h1>Where are you shopping today??</h1>
       <div class="searchcontainer"></div>
         <div class="input-group md-form form-sm form-2 pl-0">
-          <input class="form-control my-0 py-1 red-border" type="text" placeholder="Search" aria-label="Search" id="myInput" title="Type in a name">
+          <input class="form-control my-0 py-1 red-border" type="text" placeholder="Enter your zipcode... ex: 92122" aria-label="Search" id="myInput" title="Type in a name" onkeyup="myFunction()">
           <div class="input-group-append">
               <span class="input-group-text red lighten-3" id="basic-text1">
                 <a class="fa fa-search text-grey" id="searching" onclick="myFunction()" aria-hidden="true"></a>
@@ -33,20 +33,31 @@
       </div>
       <!-- Search results -->
       <ul id="myUL">
-        <li><a href="#"><b>Jons La Jolla</b><br>1234 E Street 92122</a></li>
-        <li><a href="#"><b>Vons La Jolla</b><br>4567 D Street 92022</a></li>
+        <li><a id="Jons" onclick="darkClick(this)"><b>Jons La Jolla</b><br>1234 E Street 92122</a></li>
+        <li><a id="Vons" onclick="darkClick(this)"><b>Vons La Jolla</b><br>4567 D Street 92022</a></li>
+        <li><a id="Rons" onclick="darkClick(this)"><b>Lazy Frog Temecula</b><br>8901 M Street 92012</a></li>
+        <li><a id="Quans" onclick="darkClick(this)"><b>Queen Mary's Herd San Diego</b><br>4321 L Street 93222</a></li>
+        <li><a id="Dons" onclick="darkClick(this)"><b>Project Block Inn</b><br>4567 D Street 92120</a></li>
       </ul>
 
     </div>
 
     <footer id="footer">
       <!-- Arrow back -->
-      <button type="button" class="btn btn-outline-secondary" id="back">
-          <i class="fas fa-arrow-left"></i>
-          Back
-      </button>
+      <a href="lists.html">
+        <button type="button" class="btn btn-outline-secondary" id="back">
+            <i class="fas fa-arrow-left"></i>
+            Back
+        </button>
+      </a>
+      <a href="ingredients.html" onclick="saveStore()">
+        <button type="button" class="btn btn-outline-secondary" id="back">
+            <i class="fas fa-arrow-right"></i>
+            Next
+        </button>
+      </a>
     </footer>
-    
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
