@@ -1,5 +1,6 @@
 let ingredients = ["bacon", "chicken", "eggs", "milk", "apples", "broccoli", "lettuce" ];
 let show = [];
+let myList = [];
 
 for(var i = 0; i<ingredients.length; i++){
   show.push(false);
@@ -30,29 +31,29 @@ function updateResults(){
   var search = document.getElementById("search");
   var index = ingredients.indexOf(search.value)
   if(index > -1){
-    show[index] = true;
+    if(show[index]!=true){
+      myList.push(ingredients[index]);
+      show[index] = true;
+    }
     displayIngredients();
+    search.value = "";
   }
-  
-  
 }
 
 
 function displayIngredients(){
   var list = document.getElementById("list");
   list.innerHTML = "";
-  if(show[i]===true){
-    for(var i = 0; i<ingredients.length; i++){
-        var addToList = '<div>'
-        + '<button type="button" class="btn btn-light" disabled>'
-        + ingredients[i]
-        + '</button>'
-        + ' <button type="button" class="btn btn-danger">'
-        + '<i class="fas fa-minus"></i>'
-        + '</button>'
-        + '</div>';
-        list.innerHTML += addToList;
-    }
+  for(var i = 0; i<myList.length; i++){
+      var addToList = '<div>'
+      + '<button type="button" class="btn btn-light" disabled>'
+      + myList[i]
+      + '</button>'
+      + ' <button type="button" class="btn btn-danger">'
+      + '<i class="fas fa-minus"></i>'
+      + '</button>'
+      + '</div>';
+      list.innerHTML += addToList;
   }
 }
 
@@ -84,6 +85,11 @@ function filterResults(){
     }
   }
 
+}
+
+function saveMyList(){
+  localStorage.setItem('myList', JSON.stringify(myList));
+  //alert(localStorage.getItem("myList"))
 }
 
 (function(window, document, undefined){
