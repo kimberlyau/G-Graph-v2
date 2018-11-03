@@ -1,8 +1,8 @@
-
+alert(localStorage.getItem('test'))
 (function(window, document, undefined){
 
     window.onload = init;
-    
+
       function init(){
         // the code to be called when the dom has loaded
         // #document has its nodes
@@ -23,5 +23,5 @@
         }
 
       }
-    
+
     })(window, document, undefined);

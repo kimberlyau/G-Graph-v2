@@ -37,3 +37,16 @@ function darkClick (elmnt) {
     check = check - 1;
   }
 }
+
+function saveStore () {
+  ul = document.getElementById("myUL");
+  li = ul.getElementsByTagName("li");
+
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    text = a.innerHTML.replace('<br>', '').replace('<b>', '').replace('</b>', '').toUpperCase();
+    alert(text);
+  }
+
+  localStorage.setItem('test', text)
+}
