@@ -18,7 +18,10 @@
         <div class="navibar">
             <a href="index.html" class="fas fa-home" id="icon"></a>
         </div>
-        <h2>Store Map</h2>
+        <h2 id="name">Store Map</h2>
+        <script>
+          document.getElementById("name").innerHTML = localStorage.getItem('selectedStore');
+        </script>
         <img id="map" src="images/map.png" alt="Loading">
 
         <div id="list"></div>
@@ -26,9 +29,9 @@
             <button type="button" class="btn btn-outline-secondary">
                 <i class="fas fa-arrow-left"></i>
                 Change List
-            </button>     
+            </button>
         </a>
-           
+
         <a href="email.html">
             <button type="button" class="btn btn-outline-secondary">
                 Done

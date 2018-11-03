@@ -1,4 +1,3 @@
-alert(localStorage.getItem('test'))
 (function(window, document, undefined){
 
     window.onload = init;
