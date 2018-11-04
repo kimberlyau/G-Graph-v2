@@ -34,52 +34,49 @@
 
     <h1> Saved Lists </h1>
 
-
     <div id="accordion">
 
-      <div class="card">
+      <div class="card template" id="trying">
         <div class="card-header" id="headingOne">
           <h5 class="mb-0">
             <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
               aria-controls="collapseOne">
               List 1
-              <button type="button" class="btn btn-danger right" onclick="deleteList()">
+              <button type="button" class="btn btn-danger right" id="delRow">
                 <i class="fas fa-minus"></i>
               </button>
-
             </button>
           </h5>
         </div>
 
         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-          <div class="panel-body">
-              <ul >
-                  <li >Cras justo odio</li>
-                </ul>
+          <div class="panel-body" id="testing">
+            <ul>
+              <li>Cras justo odio</li>
+            </ul>
           </div>
         </div>
       </div>
 
 
       <div class="card">
-          <div class="card-header" id="headingTwo">
-            <h5 class="mb-0">
-              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
-                aria-controls="collapseTwo">
-                List 2
-              </button>
-            </h5>
-          </div>
-          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-            <div class="card-body">
-              Apples, oranges
-            </div>
+        <div class="card-header" id="headingTwo">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+              aria-controls="collapseTwo">
+              List 2
+            </button>
+          </h5>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+          <div class="card-body">
+            Apples, oranges
           </div>
         </div>
+      </div>
 
 
     </div>
-
 
 
     <a href="lists.html">
@@ -89,33 +86,27 @@
     </a>
   </div>
 
-
+  <button class="btn btn-lg btn-primary btn-add-panel"> <i class="glyphicon glyphicon-plus"></i> Add new panel</button>
 
 </body>
-
-
 <script>
-    var acc = document.getElementsByClassName("accordion");
-    var i;
-    
-    for (i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var panel = this.nextElementSibling;
-            if (panel.style.display === "block") {
-                panel.style.display = "none";
-            } else {
-                panel.style.display = "block";
-            }
-        });
-    }
-    </script>
+var $template = $(".template");
 
-<script>
-  $("ul").on("click", "button", function (e) {
-    e.preventDefault();
-    $(this).parent().remove();
-  });
+var hash = 2;
+$(".btn-add-panel").on("click", function () {
+    var $newPanel = $template.clone();
+    $newPanel.find(".collapse").removeClass("in");
+    $newPanel.find(".accordion-toggle").attr("href", "#" + (++hash))
+        .text("Dynamic panel #" + hash);
+    $newPanel.find(".panel-collapse").attr("id", hash);
+    $("#accordion").append($newPanel.fadeIn());
+});
+
+
+$("#trying").on('click','#delRow',function() {
+ 	$("#trying").remove();
+});
+
 </script>
 
 </html>
