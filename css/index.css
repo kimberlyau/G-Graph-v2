@@ -1,10 +1,15 @@
 body {
   margin-left: 7.5%;
   margin-right: 7.5%;
+  margin-top: 15%;
 }
 
-h1 {
+h1, h5 {
   text-align: center;
+}
+
+h3 {
+  font-style: italic;
 }
 
 li {
@@ -35,9 +40,15 @@ li {
   transform: scale(1.25);
 }
 
-#back {
+#signin {
   /* margin-top: 25%; */
   vertical-align: bottom;
+
+}
+
+#logo {
+  height: 120px;
+  padding-left: 35%;
 }
 
 /* W3 School */

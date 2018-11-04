@@ -6,52 +6,56 @@ body {
     margin-left: 7.5%;
     margin-right: 7.5%;
   }
-  
-  h1 {
+
+  h1,h3,h4{
     text-align: center;
   }
-  
+
+  button {
+    margin: auto 35%;
+  }
+
   li {
     display: none;
     margin-top: 5px;
     margin-bottom: 2.5px;
   }
-  
+
   .searchcontainer {
     padding-left: 15%;
     padding-right: 15%;
     margin-top: 15%;
   }
-  
+
   .navibar {
     text-align: right;
     margin-top: 5%;
     font-size: 175%;
   }
-  
+
   #icon:hover {
     color: blue;
     transform: scale(1.1);
   }
-  
+
   #searching:hover {
     color: black;
     transform: scale(1.25);
   }
-  
+
   #back {
     /* margin-top: 25%; */
     vertical-align: bottom;
   }
-  
+
   /* W3 School */
-  
+
   #myUL {
     list-style-type: none;
     padding: 0;
     margin: 0;
   }
-  
+
   #myUL li a {
     border: 1px solid #ddd;
     margin-top: -1px; /* Prevent double borders */
@@ -62,7 +66,7 @@ body {
     color: black;
     display: block
   }
-  
+
   #myUL li a:hover:not(.header) {
     background-color: #eee;
   }
