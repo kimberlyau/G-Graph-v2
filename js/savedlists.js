@@ -65,9 +65,12 @@ function deleteList(elem){
     var id = parseInt(getList.substr(3, getList.length));
     console.log(id);
     var savedLists = JSON.parse(localStorage.getItem("savedLists"));
-    savedLists = savedLists.splice(id, 1);
-    console.log(savedLists)
-    localStorage.setItem("savedLists", JSON.stringify(savedLists));
+    //savedLists = savedLists.splice(id, 1);
+    var newList = [];
+    for(var i = 0; i<savedLists.length; i++){
+        if(i!=id){ newList.push(savedLists[i]);}
+    }
+    localStorage.setItem("savedLists", JSON.stringify(newList));
     showSavedList();
 
 }
