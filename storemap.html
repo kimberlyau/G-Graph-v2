@@ -56,8 +56,10 @@
             }
 
             // Change path background
-            document.getElementById("map").style.backgroundImage = `url('images/map${iSize}.png')`;
-
+            if (iSize > 0) {
+              document.getElementById("map").style.backgroundImage = `url('images/map${iSize}.png')`;
+            }
+            
           </script>
         </div>
 
