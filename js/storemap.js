@@ -1,3 +1,14 @@
+function togglePin (elmnt, index) {
+  var thisID = $(elmnt).parent().find('label').text();
+  var changedColor = "red";
+
+  if (document.getElementById("item" + index).style.color != changedColor) {
+    document.getElementById("item" + index).style.color = changedColor;
+  } else {
+    document.getElementById("item" + index).style.color = "black";
+  }
+}
+
 (function(window, document, undefined){
 
     window.onload = init;
@@ -11,7 +22,7 @@
         for(var i = 0; i<ingredients.length; i++){
             var addToList = '<div>'
             + '<div class="form-check">'
-            + '<input type="checkbox" class="form-check-input" id="materialUnchecked">'
+            + `<input type="checkbox" class="form-check-input" id="materialUnchecked" onchange="togglePin(this, ${i + 1})">`
             + '<label class="form-check-label" for="materialUnchecked">'
             + ingredients[i]
             + '</label>'
