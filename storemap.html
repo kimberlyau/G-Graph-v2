@@ -34,7 +34,7 @@
         <!-- Map Section -->
         <div id="map">
           <a class="fas fa-map-pin" id="item1" data-toggle="tooltip" data-placement="right" title="item1"><a>
-          <a class="fas fa-map-pin" id="item2" data-toggle="tooltip" data-placement="right" title="item1"><a>
+          <a class="fas fa-map-pin" id="item2" data-toggle="tooltip" data-placement="right" title="item2"><a>
           <a class="fas fa-map-pin" id="item3" data-toggle="tooltip" data-placement="right" title="item1"><a>
           <a class="fas fa-map-pin" id="item4" data-toggle="tooltip" data-placement="right" title="item1"><a>
           <a class="fas fa-map-pin" id="item5" data-toggle="tooltip" data-placement="right" title="item1"><a>
@@ -42,9 +42,26 @@
           <a class="fas fa-map-pin" id="item7" data-toggle="tooltip" data-placement="right" title="item1"><a>
           <a class="fas fa-map-pin" id="item8" data-toggle="tooltip" data-placement="right" title="item1"><a>
 
-        <div>
+          <script>
+            let ingredients = JSON.parse(localStorage.getItem('myList'));
+            let iSize = ingredients.length;
+
+            for (var i = iSize + 1; i < 9; i++) {
+              // Hides all unused items
+              document.getElementById("item" + i).style.display = "none";
+            }
+
+            for (var i = 1; i <= iSize; i++) {
+              document.getElementById("item" + i).title=ingredients[i - 1];
+            }
+
+          </script>
+        </div>
+
+        <h5><b>Your List:</b></h5>
 
         <div class="anyClass" id="list">
+
         </div>
         <a href="ingredients.html">
             <button type="button" class="btn btn-outline-secondary">

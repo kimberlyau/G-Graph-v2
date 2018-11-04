@@ -21,29 +21,29 @@
 
         <h1>Your List</h1>
 
-        <div id="list"></div>
-
         <form class="form-inline mr-auto">
             <div class="input-group mb-2 mr-sm-2">
                 <input type="text" class="form-control" id="search" placeholder="Search Ingredients" onkeyup="filterResults()">
                 <div class="input-group-append">
-                        <button type="button" class="btn btn-success" onclick="updateResults()">
+                        <button type="button" class="btn btn-success" onclick="updateResults(this)">
                             <i class="fas fa-plus"></i>
                         </button>
-                </div>      
+                </div>
             </div>
-           
+
         </form>
 
         <ul id="myUL"></ul>
-       
+
+        <div id="list"></div>
+
         <a href="location.html">
             <button type="button" class="btn btn-outline-secondary">
                 <i class="fas fa-arrow-left"></i>
                 Change Location
-            </button>     
+            </button>
         </a>
-       
+
         <a href="storemap.html" onclick="saveMyList()">
             <button type="button" class="btn btn-outline-secondary">
                 Load Map

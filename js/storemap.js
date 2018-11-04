@@ -5,7 +5,7 @@
       function init(){
         // the code to be called when the dom has loaded
         // #document has its nodes
-        let ingredients = ["bacon", "eggs", "milk","yogurt"];
+        let ingredients = JSON.parse(localStorage.getItem('myList'));
 
         var list = document.getElementById("list");
         for(var i = 0; i<ingredients.length; i++){
