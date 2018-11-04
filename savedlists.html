@@ -58,22 +58,97 @@
         </div>
       </div>
 
-
-      <div class="card">
-        <div class="card-header" id="headingTwo">
-          <h5 class="mb-0">
-            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
-              aria-controls="collapseTwo">
-              List 2
-            </button>
-          </h5>
-        </div>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-          <div class="card-body">
-            Apples, oranges
+      <div class="card template" id="trying2">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                aria-controls="collapseOne">
+                List 2
+                <button type="button" class="btn btn-danger right" id="delRow">
+                  <i class="fas fa-minus"></i>
+                </button>
+              </button>
+            </h5>
+          </div>
+  
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="panel-body" id="testing">
+              <ul>
+                <li>Cras justo odio</li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
+  
+        <div class="card template" id="trying3">
+            <div class="card-header" id="headingOne">
+              <h5 class="mb-0">
+                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                  aria-controls="collapseOne">
+                  List 3
+                  <button type="button" class="btn btn-danger right" id="delRow">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                </button>
+              </h5>
+            </div>
+    
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="panel-body" id="testing">
+                <ul>
+                  <li>Cras justo odio</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+    
+          <div class="card template" id="trying4">
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                  <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                    aria-controls="collapseOne">
+                    List 4
+                    <button type="button" class="btn btn-danger right" id="delRow">
+                      <i class="fas fa-minus"></i>
+                    </button>
+                  </button>
+                </h5>
+              </div>
+      
+              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                <div class="panel-body" id="testing">
+                  <ul>
+                    <li>Cras justo odio</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+      
+            <div class="card template" id="trying5">
+                <div class="card-header" id="headingOne">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                      aria-controls="collapseOne">
+                      List 5
+                      <button type="button" class="btn btn-danger right" id="delRow">
+                        <i class="fas fa-minus"></i>
+                      </button>
+                    </button>
+                  </h5>
+                </div>
+        
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                  <div class="panel-body" id="testing">
+                    <ul>
+                      <li>Cras justo odio</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+        
+                          
+
+      
 
 
     </div>
@@ -86,25 +161,27 @@
     </a>
   </div>
 
-  <button class="btn btn-lg btn-primary btn-add-panel"> <i class="glyphicon glyphicon-plus"></i> Add new panel</button>
-
 </body>
 <script>
-var $template = $(".template");
-
-var hash = 2;
-$(".btn-add-panel").on("click", function () {
-    var $newPanel = $template.clone();
-    $newPanel.find(".collapse").removeClass("in");
-    $newPanel.find(".accordion-toggle").attr("href", "#" + (++hash))
-        .text("Dynamic panel #" + hash);
-    $newPanel.find(".panel-collapse").attr("id", hash);
-    $("#accordion").append($newPanel.fadeIn());
-});
-
 
 $("#trying").on('click','#delRow',function() {
  	$("#trying").remove();
+});
+
+$("#trying2").on('click','#delRow',function() {
+ 	$("#trying2").remove();
+});
+
+$("#trying3").on('click','#delRow',function() {
+ 	$("#trying3").remove();
+});
+
+$("#trying4").on('click','#delRow',function() {
+ 	$("#trying4").remove();
+});
+
+$("#trying5").on('click','#delRow',function() {
+ 	$("#trying5").remove();
 });
 
 </script>
