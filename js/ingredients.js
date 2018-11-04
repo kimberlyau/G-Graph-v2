@@ -11,7 +11,7 @@ function initResults(){
   for(var i = 0; i<ingredients.length; i++){
     var addToList = 
     '<li>'
-    + '<a onclick="putInInput(this)">'
+    + '<a onclick="updateResults(this)">'
     + '<b>'
     + ingredients[i]
     + '</b>'
@@ -27,17 +27,25 @@ function putInInput(elem){
   search.value = show;
 }
 
-function updateResults(){
-  var search = document.getElementById("search");
-  var index = ingredients.indexOf(search.value)
+function updateResults(elem){
+  var search;
+  if(elem.tagName === "BUTTON"){ 
+    search = document.getElementById("search").value;
+  }
+  else{
+    search = $(elem).text();
+    console.log(search)
+  }
+  var index = ingredients.indexOf(search)
   if(index > -1){
     if(show[index]!=true){
       myList.push(ingredients[index]);
       show[index] = true;
     }
+    document.getElementById("search").value = "";
     displayIngredients();
     filterResults();
-    search.value = "";
+    
   }
 }
 
