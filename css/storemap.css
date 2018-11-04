@@ -40,15 +40,15 @@ h5, #list {
   background-image: url("../images/generic_map.png");
   background-repeat: no-repeat;
   background-size: contain;
-  /* background-position: center; */
-  /* background-position: top; */
   overflow: auto;
   width: 100%;
   height: 20em;
 
 }
 
-
+#list {
+  margin-bottom: 15px;
+}
 
 /* Pins */
 #item1 {
