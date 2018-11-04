@@ -89,3 +89,7 @@ li {
 .btn:hover {
   background-color: RoyalBlue;
 }
+
+.dropdownMenuButton {
+  right: 0; left: auto;
+}
