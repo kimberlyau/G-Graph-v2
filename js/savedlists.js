@@ -2,6 +2,7 @@ var listFood = JSON.parse(localStorage.getItem("myList"));
 
 function showIngredientsList() {
     var showIngred = document.getElementById("testing");
+    showIngred.innerHTML="";
     //var ul = document.getElementById("ingredLists");
     for(var i = 0; i<listFood.length; i++){
         var foodBullets = document.createElement("LI");
@@ -38,3 +39,18 @@ function deleteItem(elem){
     show[index]=false;
     displayIngredients();
   }
+
+  (function(window, document, undefined){
+
+    // code that should be taken care of right away
+    
+    window.onload = init;
+    
+      function init(){
+        // the code to be called when the dom has loaded
+        // #document has its nodes
+        showIngredientsList();
+
+      }
+    
+    })(window, document, undefined);
