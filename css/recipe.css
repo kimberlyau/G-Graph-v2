@@ -70,25 +70,6 @@ li {
   overflow: hidden;
 }
 
-.fa-caret-down {
-  color: white;
-}
-
-.fa-search{
-  color: white;
-}
-
-.btn {
-  background-color: DodgerBlue;
-  border: none;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.btn:hover {
-  background-color: RoyalBlue;
-}
 
 .dropdownMenuButton {
   right: 0; left: auto;
