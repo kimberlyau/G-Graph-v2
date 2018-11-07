@@ -7,6 +7,7 @@ for(var i = 0; i<ingredients.length; i++){
 }
 
 function initResults(){
+  //creates search results
   var ul = document.getElementById("myUL");
   for(var i = 0; i<ingredients.length; i++){
     var addToList = 
@@ -18,7 +19,13 @@ function initResults(){
     + '</a>'
     + '</li>';
     ul.innerHTML += addToList;
+
+    //creates lists that's already loaded
+    var getList = JSON.parse(localStorage.getItem("myList"));
+    if(getList != myList) myList = getList; //myList is empty currently
   }
+
+
 }
 
 function putInInput(elem){
@@ -121,8 +128,9 @@ function saveMyList(){
       function init(){
         // the code to be called when the dom has loaded
         // #document has its nodes
-        displayIngredients();
         initResults();
+        displayIngredients();
+        
 
         
 
