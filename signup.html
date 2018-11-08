@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
         crossorigin="anonymous">
 
-    <script type="text/javascript" src="js/index.js"></script>
     <link rel="stylesheet" type="text/css" href="css/index.css">
 
     <!-- jQuery library -->
@@ -27,35 +26,44 @@
 </head>
 
 <body>
-    <div className="StartScreen">
-        <h1> G-Graph </h1>
-        <h5> Here to make your grocery shopping a breeze! </h5>
-        <img src="logo.png" alt="G-Graph Logo" id="logo">
-        <br>
+    <div className="Signup">
+        <h1> Create New Account </h1>
 
         <form>
             <div class="input-container">
-                <i class="fa fa-user icon"></i>
+                <input class="input-field" type="text" placeholder="Name" name="name">
+            </div>
+
+            <div class="input-container">
                 <input class="input-field" type="text" placeholder="Email" name="email">
             </div>
+
             <div class="input-container">
-                <i class="fa fa-lock icon"></i>
                 <input class="input-field" type="password" placeholder="Password" name="password">
+            </div>
+            
+            <div class="input-container">
+                <input class="input-field" type="password" placeholder="Confirm Password" name="password">
             </div>
             <br>
         </form>
 
-        <a href="lists.html">
+        <a href="index.html">
             <button type="button" class="btn btn-outline-secondary" id="signin">
-                Sign In
+                <i class="fas fa-arrow-left"></i>
+                Back
+            </button>
+        </a>
+
+        <a href="lists.html">
+            <button type="button" class="btn btn-outline-secondary" id="back">
+                Create Account!
                 <i class="fas fa-arrow-right"></i>
             </button>
         </a>
 
-        <br>
-        <a href="signup.html">
-            New? Register for an account!
-        </a>
+
+
     </div>
 </body>
 

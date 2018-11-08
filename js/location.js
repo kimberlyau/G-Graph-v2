@@ -27,13 +27,28 @@ function myFunction() {
     }
   }
 }
+var selectedStore = "";
 
 function darkClick (elmnt) {
   if (check == 0) {
     elmnt.style.color = 'blue';
     check = check + 1;
+    selectedStore = elmnt.innerHTML.toUpperCase();
   } else {
     elmnt.style.color = 'black';
     check = check - 1;
   }
+}
+
+function saveStore () {
+  // ul = document.getElementById("myUL");
+  // li = ul.getElementsByTagName("li");
+  //
+  // for (i = 0; i < li.length; i++) {
+  //   a = li[i].getElementsByTagName("a")[0];
+  //   text = a.innerHTML.replace('<br>', '').replace('<b>', '').replace('</b>', '').toUpperCase();
+  //   alert(text);
+  localStorage.setItem('selectedStore', selectedStore);
+  // }
+
 }

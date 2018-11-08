@@ -10,48 +10,50 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/location.css">
     <link rel="stylesheet" type="text/css" href="css/ingredients.css">
-    <script type="text/javascript" src="js/ingredients.js"></script>
-    <title>Hello, world!</title>
+    <title>G-Graph</title>
   </head>
   <body>
     <div>
         <div class="navibar">
-            <a href="lists.html" class="fas fa-home" id="icon"></a>
+            <a class="fas fa-home" id="icon" href="lists.html"></a>
         </div>
 
-        <h1>Your List</h1>
-
-        <form class="form-inline mr-auto">
-            <div class="input-group mb-2 mr-sm-2">
-                <input type="text" class="form-control" id="search" placeholder="Search Ingredients" onkeyup="filterResults()">
-                <div class="input-group-append">
-                        <button type="button" class="btn btn-success" onclick="updateResults(this)">
-                            <i class="fas fa-plus"></i>
-                        </button>
-                </div>
-            </div>
-
-        </form>
-
-        <ul id="myUL"></ul>
-
-        <div id="list"></div>
-
-        <a href="location.html" onclick="saveMyList()">
+        <div className="Lists">
+            <h1> How would like to populate your list? </h1>
+            <br>
+            <h3></h2>
+            <a href="savedlists.html">
             <button type="button" class="btn btn-outline-secondary">
-                <i class="fas fa-arrow-left"></i>
-                Change Location
+                From a Saved List
             </button>
-        </a>
+            </a>
+            <br>
+            <br>
+            <a>
+            <button type="button" class="btn btn-outline-secondary" >
+                From a Recipe
+            </button>
+            </a>
+            <br>
+            <br>
 
-        <a href="loading.html" onclick="saveMyList()">
-            <button type="button" class="btn btn-outline-secondary">
-                Load Map
-                <i class="fas fa-arrow-right"></i>
+            <a href="location.html" onclick="eraseMyList()">
+            <button type="button" class="btn btn-outline-secondary" > <!--onclick=accordionIngredients() > -->
+                Create my own!
             </button>
-        </a>
+            </a>
+        </div>
+    
 
     </div>
+
+    <script>
+        function eraseMyList(){
+            console.log("here");
+            localStorage.setItem("myList", JSON.stringify([]));
+        }
+    
+    </script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
