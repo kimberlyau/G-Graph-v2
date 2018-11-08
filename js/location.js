@@ -50,8 +50,6 @@ function saveStore () {
   //   alert(text);
   localStorage.setItem('selectedStore', selectedStore);
   // }
-
-  alert(localStorage.getItem('nextToggle'));
   if (localStorage.getItem('nextToggle') == "recipe") {
     document.getElementById("myNext").href="recipe.html";
   }
