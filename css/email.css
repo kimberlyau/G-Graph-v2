@@ -63,3 +63,13 @@ body {
     background-color: #eee;
   }
   
+  .icon{
+    text-align: center;
+    display:inline-block;
+    position: relative
+}
+
+.row{
+
+ justify-content: center;
+}

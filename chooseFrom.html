@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/location.css">
     <link rel="stylesheet" type="text/css" href="css/ingredients.css">
+        <link rel="stylesheet" type="text/css" href="css/chooseFrom.css">
     <title>G-Graph</title>
   </head>
   <body>
@@ -37,23 +38,17 @@
             <br>
             <br>
 
-            <a href="location.html" onclick="eraseMyList()">
+            <a href="location.html">
             <button type="button" class="btn btn-outline-secondary" > <!--onclick=accordionIngredients() > -->
                 Create my own!
             </button>
             </a>
         </div>
-    
+
 
     </div>
 
-    <script>
-        function eraseMyList(){
-            console.log("here");
-            localStorage.setItem("myList", JSON.stringify([]));
-        }
-    
-    </script>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

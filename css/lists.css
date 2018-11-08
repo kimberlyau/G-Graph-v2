@@ -33,7 +33,7 @@ body {
     font-size: 175%;
   }
 
-  #icon:hover {
+  #icon:hover, #icon2:hover {
     color: blue;
     transform: scale(1.1);
   }

@@ -50,5 +50,12 @@ function saveStore () {
   //   alert(text);
   localStorage.setItem('selectedStore', selectedStore);
   // }
+  if (localStorage.getItem('nextToggle') == "recipe") {
+    document.getElementById("myNext").href="recipe.html";
+  }
 
+  else {
+    document.getElementById("myNext").href="ingredients.html";
+  }
+  return false;
 }
