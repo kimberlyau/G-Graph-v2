@@ -70,3 +70,13 @@ body {
   #myUL li a:hover:not(.header) {
     background-color: #eee;
   }
+
+  .icon{
+    text-align: center;
+    display:inline-block;
+}
+
+.row{
+  display: flex;
+ justify-content: center;
+}
