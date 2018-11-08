@@ -50,14 +50,12 @@ function saveStore () {
   //   alert(text);
   localStorage.setItem('selectedStore', selectedStore);
   // }
-
-  alert(localStorage.getItem('nextToggle'));
   if (localStorage.getItem('nextToggle') == "recipe") {
-    document.getElementById("next").href="recipe.html";
+    document.getElementById("myNext").href="recipe.html";
   }
 
   else {
-    document.getElementById("next").href="ingredients.html";
+    document.getElementById("myNext").href="ingredients.html";
   }
   return false;
 }

@@ -50,13 +50,21 @@
     <br>
     <br>
     <h3>Let's go Shopping!</h3>
-    <a href="location.html" class="row text-center">
+    <a href="location.html" class="row text-center" onclick="eraseMyList()">
       <button type="button" class="btn btn-outline-secondary" > <!--onclick=accordionIngredients() > -->
         <i class="fas fa-shopping-cart" onclick="goShopping()"></i>
       </button>
     </a>
   </div>
 
+
+  <script>
+      function eraseMyList(){
+          console.log("here");
+          localStorage.setItem("myList", JSON.stringify([]));
+      }
+
+  </script>
 
 
 </body>
