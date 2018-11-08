@@ -1,10 +1,14 @@
 
+//called on email.html
 function saveList(){
     var myList = JSON.parse(localStorage.getItem("myList"));
     if(myList === []){ 
         alert("There is nothing on your list please add something to it"); 
         return;
     }
+
+    var selectedStore = localStorage.getItem("selectedStore");
+    myList.push(selectedStore);
     var savedLists = JSON.parse(localStorage.getItem("savedLists"));
     savedLists.push(myList);
     localStorage.setItem("savedLists", JSON.stringify(savedLists));
@@ -34,7 +38,7 @@ function showSavedList() {
             +      '<button type="button" class="btn btn-danger right" id="row' + i + '" onclick="deleteList(this)">'
             +        '<i class="fas fa-minus"></i>'
             +      '</button>'
-            +      '<a href="storemap.html"  onclick="shopList(this)"><button type="button" class="btn btn-success right" id="shop' + i + '">'
+            +      '<a href="storemap.html" onclick="shopList(this)" id="shop' + i + '"><button type="button" class="btn btn-success right">'
             +        '<i class="fas fa-shopping-cart"></i>'
             +      '</button></a>'
             +    '</button>'
@@ -43,8 +47,9 @@ function showSavedList() {
 
             +'<div id="collapse' + i + '" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">'
             +  '<div class="panel-body" id="testing">'
+            +   'Store: ' + savedLists[i][savedLists[i].length-1];
             +    '<ul>';
-            for(var j =0; j<savedLists[i].length; j++){
+            for(var j =0; j<savedLists[i].length-1; j++){
                 add+='<li>' + savedLists[i][j] + '</li>';
             }
             add +=
@@ -85,7 +90,9 @@ function shopList(elem){
     var getList = $(elem).attr('id');
     var id = parseInt(getList.substr(4, getList.length));
     var savedLists = JSON.parse(localStorage.getItem("savedLists"));
-    localStorage.setItem("myList", JSON.stringify(savedLists[id]));
+    var end = savedLists[id].length-1;
+    localStorage.setItem("myList", JSON.stringify(savedLists[id].slice(0, end)));
+    localStorage.setItem("selectedStore", savedLists[id][end]);
 }
 
 
