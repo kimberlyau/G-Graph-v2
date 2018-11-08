@@ -17,6 +17,7 @@
     <!-- Navbar -->
     <div class="navibar">
       <a class="fas fa-home" id="icon" href="lists.html"></a>
+      <a class="fas fa-sign-out-alt" id="icon2" href="index.html"></a>
       <!-- <a class="fas fa-cog" id="icon"></a> -->
     </div>
 
@@ -41,6 +42,17 @@
       </ul>
 
     </div>
+    <script>
+      // alert(localStorage.getItem('nextToggle'));
+      // if (localStorage.getItem('nextToggle').stringify() == "recipe") {
+      //   document.getElementById("next").href="recipe.html";
+      // }
+      //
+      // else {
+      //   document.getElementById("next").href="ingredients.html";
+      // }
+
+    </script>
 
     <footer id="footer">
       <!-- Arrow back -->
@@ -50,8 +62,8 @@
             Back
         </button>
       </a>
-      <a href="ingredients.html" onclick="saveStore()">
-        <button type="button" class="btn btn-outline-secondary" id="back">
+      <a href="#" onclick="saveStore()">
+        <button type="button" class="btn btn-outline-secondary" id="next">
             <i class="fas fa-arrow-right"></i>
             Next
         </button>
