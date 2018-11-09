@@ -42,9 +42,10 @@ function darkClick (elmnt) {
     check = check - 1;
   }
   localStorage.setItem('selectedStore', selectedStore);
+  saveStore(elmnt);
 }
 
-function saveStore () {
+function saveStore (elmnt) {
   // ul = document.getElementById("myUL");
   // li = ul.getElementsByTagName("li");
   //
@@ -59,11 +60,11 @@ function saveStore () {
 
   // }
   if (localStorage.getItem('nextToggle') == "recipe") {
-    document.getElementById("myNext").href="recipe.html";
+    elmnt.href="recipe.html";
   }
 
   else {
-    document.getElementById("myNext").href="ingredients.html";
+    elmnt.href="ingredients.html";
   }
   return false;
 }
