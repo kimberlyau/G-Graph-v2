@@ -1,18 +1,5 @@
 
-//called on email.html
-function saveList(){
-    var myList = JSON.parse(localStorage.getItem("myList"));
-    if(myList === []){ 
-        alert("There is nothing on your list please add something to it"); 
-        return;
-    }
 
-    var selectedStore = localStorage.getItem("selectedStore");
-    myList.push(selectedStore);
-    var savedLists = JSON.parse(localStorage.getItem("savedLists"));
-    savedLists.push(myList);
-    localStorage.setItem("savedLists", JSON.stringify(savedLists));
-}
 
 function showSavedList() {
 
