@@ -8,10 +8,10 @@ body {
   }
   
   li {
-    display: none;
-    margin-top: 5px;
-    margin-bottom: 2.5px;
-  }
+    font-size: 14px;
+    margin-left: 10px;
+    list-style-type: circle;
+ }
   
   .searchcontainer {
     padding-left: 15%;
