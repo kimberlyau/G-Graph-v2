@@ -1,18 +1,5 @@
 
-//called on email.html
-function saveList(){
-    var myList = JSON.parse(localStorage.getItem("myList"));
-    if(myList === []){ 
-        alert("There is nothing on your list please add something to it"); 
-        return;
-    }
 
-    var selectedStore = localStorage.getItem("selectedStore");
-    myList.push(selectedStore);
-    var savedLists = JSON.parse(localStorage.getItem("savedLists"));
-    savedLists.push(myList);
-    localStorage.setItem("savedLists", JSON.stringify(savedLists));
-}
 
 function showSavedList() {
 
@@ -35,17 +22,15 @@ function showSavedList() {
             + i + '" aria-expanded="true"'
             +      'aria-controls="collapseOne">'
             +      "List " + (i+1)
-            +      '<button type="button" class="btn btn-danger right" id="row' + i + '" onclick="deleteList(this)">'
+            
+            +    '</button>'
+            +    '<button type="button" class="btn btn-danger right" id="row' + i + '" onclick="deleteList(this)">'
             +        '<i class="fas fa-minus"></i>'
             +      '</button>'
-            +      '<a href="storemap.html" onclick="shopList(this)" id="shop' + i + '"><button type="button" class="btn btn-success right">'
-            +        '<i class="fas fa-shopping-cart"></i>'
-            +      '</button></a>'
-            +    '</button>'
             +  '</h5>'
             +'</div>'
 
-            +'<div id="collapse' + i + '" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">'
+            +'<div id="collapse' + i + '" class="collapse card-header" aria-labelledby="headingOne" data-parent="#accordion">'
             +  '<div class="panel-body" id="testing">'
             +   'Store: ' + savedLists[i][savedLists[i].length-1];
             +    '<ul>';
@@ -54,6 +39,14 @@ function showSavedList() {
             }
             add +=
                     '</ul>'
+            +        '<a href="storemap.html" class="right" onclick="shopList(this)" id="shop' + i + '"><button type="button" class="btn btn-success">'
+            +        '<i class="fas fa-shopping-cart"></i>'
+            +      '</button></a>'
+
+            + '<a href="ingredients.html" class="right" onclick="shopList(this)" id="shop' + i + '"><button type="button" class="btn btn-primary">'
+            +        '<i class="fas fa-edit"></i>'
+            +      '</button></a>'
+
             +     '</div>'
             +   '</div>'
             +'</div>';

@@ -8,6 +8,16 @@ h1 {
 }
 
 
+.right {
+  float: right;
+}
+
+.margin{
+  margin-right: 6%;
+  margin-bottom: 5%;
+}
+
+
 .searchcontainer {
   padding-left: 15%;
   padding-right: 15%;

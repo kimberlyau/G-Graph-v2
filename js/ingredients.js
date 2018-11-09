@@ -21,9 +21,13 @@ function initResults(){
     ul.innerHTML += addToList;
 
     //creates lists that's already loaded
-    var getList = JSON.parse(localStorage.getItem("myList"));
-    if(getList != myList) myList = getList; //myList is empty currently
   }
+  var getList = JSON.parse(localStorage.getItem("myList"));
+    if(getList != myList) myList = getList; //myList is empty currently
+    for(var i=0; i<getList.length; i++){
+      show[ingredients.indexOf(getList[i])] = true;
+    }
+   console.log();
 
 
 }

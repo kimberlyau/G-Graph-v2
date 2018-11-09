@@ -8,10 +8,10 @@ body {
   }
   
   li {
-    display: none;
-    margin-top: 5px;
-    margin-bottom: 2.5px;
-  }
+    font-size: 14px;
+    margin-left: 10px;
+    list-style-type: circle;
+ }
   
   .searchcontainer {
     padding-left: 15%;
@@ -19,11 +19,13 @@ body {
     margin-top: 15%;
   }
   
+  
   .navibar {
-    text-align: right;
     margin-top: 5%;
     font-size: 175%;
+    text-align: right;
   }
+
   
   #icon:hover {
     color: blue;

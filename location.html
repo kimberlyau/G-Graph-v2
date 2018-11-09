@@ -22,7 +22,7 @@
     </div>
 
     <div>
-      <h1>Where are you shopping today??</h1>
+      <h1>First, let's put in your location :)</h1>
       <div class="searchcontainer"></div>
         <div class="input-group md-form form-sm form-2 pl-0">
           <input class="form-control my-0 py-1 red-border" type="text" placeholder="Enter your zipcode... ex: 92122" aria-label="Search" id="myInput" title="Type in a name" onkeyup="myFunction()">
@@ -34,11 +34,11 @@
       </div>
       <!-- Search results -->
       <ul id="myUL">
-        <li><a id="Jons" href="ingredients.html" onclick="darkClick(this);saveStore()"><b>Jons La Jolla</b><br>1234 E Street 92122</a></li>
-        <li><a id="Vons" href="ingredients.html" onclick="darkClick(this);saveStore()"><b>Vons La Jolla</b><br>4567 D Street 92022</a></li>
-        <li><a id="Rons" href="ingredients.html" onclick="darkClick(this);saveStore()"><b>Lazy Frog Temecula</b><br>8901 M Street 92012</a></li>
-        <li><a id="Quans" href="ingredients.html" onclick="darkClick(this);saveStore()"><b>Queen Mary's Herd San Diego</b><br>4321 L Street 93222</a></li>
-        <li><a id="Dons" href="ingredients.html" onclick="darkClick(this);saveStore()"><b>Project Block Inn</b><br>4567 D Street 92120</a></li>
+        <li><a id="Jons" href="#" onclick="darkClick(this)"><b>Jons La Jolla</b><br>1234 E Street 92122</a></li>
+        <li><a id="Vons" href="#" onclick="darkClick(this)"><b>Vons La Jolla</b><br>4567 D Street 92022</a></li>
+        <li><a id="Rons" href="#" onclick="darkClick(this)"><b>Rons Temecula</b><br>8901 M Street 92012</a></li>
+        <li><a id="Quans" href="#" onclick="darkClick(this)"><b>(Hit The) Quan's San Diego</b><br>4321 L Street 93222</a></li>
+        <li><a id="Dons" href="#" onclick="darkClick(this)"><b>Dons Little Italy </b><br>4567 Z Street 92120</a></li>
       </ul>
 
     </div>
@@ -62,7 +62,7 @@
             Back
         </button>
       </a>
-      <a href="#" onclick="saveStore()" id="myNext">
+      <a href="#" onclick="saveStore(this)" id="myNext">
         <button type="button" class="btn btn-outline-secondary" id="next">
             <i class="fas fa-arrow-right"></i>
             Next
@@ -70,6 +70,15 @@
       </a>
     </footer>
 
+    <script>
+      if( localStorage.getItem('selectedStore') != "" ){
+        input = document.getElementById("myInput");
+        var nameS = localStorage.getItem('selectedStore').replace('<B>', '').replace('</B>', ' ');
+        nameS = nameS.substr(0, nameS.indexOf("<BR>"))
+        input.value = nameS;
+      }
+
+    </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

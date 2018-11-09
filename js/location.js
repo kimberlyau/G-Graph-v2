@@ -1,5 +1,8 @@
 var check = 0;
 
+
+
+
 function myFunction() {
   var input, filter, ul, li, a, i;
 
@@ -27,9 +30,9 @@ function myFunction() {
     }
   }
 }
-var selectedStore = "";
 
 function darkClick (elmnt) {
+  var selectedStore = "";
   if (check == 0) {
     elmnt.style.color = 'blue';
     check = check + 1;
@@ -38,9 +41,11 @@ function darkClick (elmnt) {
     elmnt.style.color = 'black';
     check = check - 1;
   }
+  localStorage.setItem('selectedStore', selectedStore);
+  saveStore(elmnt);
 }
 
-function saveStore () {
+function saveStore (elmnt) {
   // ul = document.getElementById("myUL");
   // li = ul.getElementsByTagName("li");
   //
@@ -48,14 +53,18 @@ function saveStore () {
   //   a = li[i].getElementsByTagName("a")[0];
   //   text = a.innerHTML.replace('<br>', '').replace('<b>', '').replace('</b>', '').toUpperCase();
   //   alert(text);
-  localStorage.setItem('selectedStore', selectedStore);
+  if(localStorage.getItem("selectedStore") === ""){
+    alert("Please select a store!");
+    return;
+  }
+
   // }
   if (localStorage.getItem('nextToggle') == "recipe") {
-    document.getElementById("myNext").href="recipe.html";
+    elmnt.href="recipe.html";
   }
 
   else {
-    document.getElementById("myNext").href="ingredients.html";
+    elmnt.href="ingredients.html";
   }
   return false;
 }
