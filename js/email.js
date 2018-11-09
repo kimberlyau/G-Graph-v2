@@ -19,8 +19,8 @@ function displaySummary(){
     var myList = JSON.parse(localStorage.getItem("myList"));
     var add ='<div>'
         +  '<div class="panel-body" id="testing">'
-        +   'Store: ' + selectedStore 
-        +    '<div>List:<ul>';
+        +   '<b>Store:</b> ' + selectedStore 
+        +    '<br><div><b>List:</b><ul>';
         for(var j =0; j<myList.length; j++){
             add += '<li>' + myList[j] + '</li>';
         }

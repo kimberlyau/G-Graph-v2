@@ -19,11 +19,18 @@ body {
     margin-top: 15%;
   }
   
-  .navibar {
+  .pad{
+    padding-right: 10px;
+  }
+  .right{
+    float: right;
     text-align: right;
+  }
+  .navibar {
     margin-top: 5%;
     font-size: 175%;
   }
+
   
   #icon:hover {
     color: blue;
