@@ -50,7 +50,7 @@
     <br>
     <br>
     <h3>Let's go Shopping!</h3>
-    <a href="location.html" class="row text-center" onclick="eraseMyList()">
+    <a href="location.html" class="row text-center" onclick="erase()">
       <button type="button" class="btn btn-outline-secondary" > <!--onclick=accordionIngredients() > -->
         <i class="fas fa-shopping-cart" onclick="goShopping()"></i>
       </button>
@@ -59,9 +59,10 @@
 
 
   <script>
-      function eraseMyList(){
+      function erase(){
           console.log("here");
           localStorage.setItem("myList", JSON.stringify([]));
+          localStorage.setItem("selectedStore", "");
       }
 
   </script>

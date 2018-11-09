@@ -35,17 +35,15 @@ function showSavedList() {
             + i + '" aria-expanded="true"'
             +      'aria-controls="collapseOne">'
             +      "List " + (i+1)
-            +      '<button type="button" class="btn btn-danger right" id="row' + i + '" onclick="deleteList(this)">'
+            
+            +    '</button>'
+            +    '<button type="button" class="btn btn-danger right" id="row' + i + '" onclick="deleteList(this)">'
             +        '<i class="fas fa-minus"></i>'
             +      '</button>'
-            +      '<a href="storemap.html" onclick="shopList(this)" id="shop' + i + '"><button type="button" class="btn btn-success right">'
-            +        '<i class="fas fa-shopping-cart"></i>'
-            +      '</button></a>'
-            +    '</button>'
             +  '</h5>'
             +'</div>'
 
-            +'<div id="collapse' + i + '" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">'
+            +'<div id="collapse' + i + '" class="collapse card-header" aria-labelledby="headingOne" data-parent="#accordion">'
             +  '<div class="panel-body" id="testing">'
             +   'Store: ' + savedLists[i][savedLists[i].length-1];
             +    '<ul>';
@@ -54,6 +52,9 @@ function showSavedList() {
             }
             add +=
                     '</ul>'
+            +        '<a href="storemap.html" class="right" onclick="shopList(this)" id="shop' + i + '"><button type="button" class="btn btn-success">'
+            +        '<i class="fas fa-shopping-cart"></i>'
+            +      '</button></a>'
             +     '</div>'
             +   '</div>'
             +'</div>';

@@ -19,8 +19,16 @@
             <a href="lists.html" class="fas fa-home" id="icon"></a>
             <a class="fas fa-sign-out-alt" id="icon2" href="index.html"></a>
         </div>
+        <h2>Shopping at:</h2>
+        <h4 id='storeName'></h4>
+        <script>
+                var sel = localStorage.getItem('selectedStore');
+                if (sel != "") {
+                  document.getElementById("storeName").innerHTML = sel;
+                }
+              </script>
 
-        <h1>Your List</h1>
+        <h2>Your List</h2>
 
         <form class="form-inline mr-auto">
             <div class="input-group mb-2 mr-sm-2">
