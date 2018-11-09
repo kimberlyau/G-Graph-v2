@@ -19,16 +19,11 @@ body {
     margin-top: 15%;
   }
   
-  .pad{
-    padding-right: 10px;
-  }
-  .right{
-    float: right;
-    text-align: right;
-  }
+  
   .navibar {
     margin-top: 5%;
     font-size: 175%;
+    text-align: right;
   }
 
   
