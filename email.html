@@ -47,8 +47,8 @@
 
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-    <a href="done.html" onclick="saveList()" class="row text-center">
-      <button type="button" class="btn btn-outline-secondary">
+    <a class="row text-center">
+      <button type="button" id="saveAs" class="btn btn-outline-secondary">
         <i class="fa fa-check-circle fa-10x"></i>
       </button>
     </a>
@@ -60,9 +60,38 @@
       Back
     </button>
   </a>
-</div>
 
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
 
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+      </div>
+      <div class="modal-body">
+          <h5>Do you want to:</h5>
+          <button type="button" id="overwrite" class="btn btn-outline-secondary">
+            Overwrite my List
+          </button>
+          <button type="button" id="newList" class="btn btn-outline-secondary">
+            Save as new
+          </button>
+        </div>
+      <div class="modal-body">
+       <h5>Name your List:</h5>
+       <input type="text" class="form-control" id="listName">
+       <a href="done.html" class="text-center" onclick="saveList()">
+          <button type="button" class="btn btn-outline-secondary">
+            Save
+          </button>
+        </a>
+      </div>
+      
+    </div>
+  </div>
+
+<!--  href="done.html"-->
 
 </body>
 

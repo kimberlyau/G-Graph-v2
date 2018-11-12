@@ -21,7 +21,7 @@ function showSavedList() {
             +   '<button class="btn btn-link" data-toggle="collapse" data-target="#collapse'
             + i + '" aria-expanded="true"'
             +      'aria-controls="collapseOne">'
-            +      "List " + (i+1)
+            +      savedLists[i][0]
             
             +    '</button>'
             +    '<button type="button" class="btn btn-danger right" id="row' + i + '" onclick="deleteList(this)">'
@@ -32,10 +32,10 @@ function showSavedList() {
 
             +'<div id="collapse' + i + '" class="collapse card-header" aria-labelledby="headingOne" data-parent="#accordion">'
             +  '<div class="panel-body" id="testing">'
-            +   'Store: ' + savedLists[i][savedLists[i].length-1];
+            +   'Store: ' + savedLists[i][1];
             +    '<ul>';
-            for(var j =0; j<savedLists[i].length-1; j++){
-                add+='<li>' + savedLists[i][j] + '</li>';
+            for(var j = 0; j<savedLists[i][2].length; j++){
+                add+='<li>' + savedLists[i][2][j] + '</li>';
             }
             add +=
                     '</ul>'
@@ -83,9 +83,14 @@ function shopList(elem){
     var getList = $(elem).attr('id');
     var id = parseInt(getList.substr(4, getList.length));
     var savedLists = JSON.parse(localStorage.getItem("savedLists"));
-    var end = savedLists[id].length-1;
-    localStorage.setItem("myList", JSON.stringify(savedLists[id].slice(0, end)));
-    localStorage.setItem("selectedStore", savedLists[id][end]);
+    localStorage.setItem("myList", JSON.stringify(savedLists[id][2]));
+    console.log(savedLists[id][2]);
+    localStorage.setItem("selectedStore", savedLists[id][1]);
+    console.log(savedLists[id][1]);
+    localStorage.setItem("listName", savedLists[id][0]);
+    console.log(savedLists[id][0]);
+    localStorage.setItem("fromList", id.toString());
+    console.log(id.toString());
 }
 
 
