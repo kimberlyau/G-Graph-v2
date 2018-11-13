@@ -1,4 +1,4 @@
-let ingredients = ["bacon", "chicken", "eggs", "milk", "apples", "broccoli", "lettuce" ];
+let ingredients = ["bacon", "chicken", "eggs", "milk", "apples", "broccoli", "lettuce", "tomato"];
 let show = [];
 let myList = [];
 
@@ -10,7 +10,7 @@ function initResults(){
   //creates search results
   var ul = document.getElementById("myUL");
   for(var i = 0; i<ingredients.length; i++){
-    var addToList = 
+    var addToList =
     '<li>'
     + '<a onclick="updateResults(this)">'
     + '<b>'
@@ -40,7 +40,7 @@ function putInInput(elem){
 
 function updateResults(elem){
   var search;
-  if(elem.tagName === "BUTTON"){ 
+  if(elem.tagName === "BUTTON"){
     search = document.getElementById("search").value;
   }
   else{
@@ -56,7 +56,7 @@ function updateResults(elem){
     document.getElementById("search").value = "";
     displayIngredients();
     filterResults();
-    
+
   }
 }
 
@@ -101,7 +101,7 @@ function filterResults(){
     for (i = 0; i < li.length; i++) {
           li[i].style.display = "none";
         }
-    } 
+    }
   else {
     for (i = 0; i < li.length; i++) {
         a = li[i].getElementsByTagName("a")[0];
@@ -125,24 +125,21 @@ function saveMyList(){
 (function(window, document, undefined){
 
     // code that should be taken care of right away
-    
+
     window.onload = init;
 
-    
+
       function init(){
         // the code to be called when the dom has loaded
         // #document has its nodes
         initResults();
         displayIngredients();
-        
 
-        
+
+
 
       }
 
-      
-    
+
+
 })(window, document, undefined);
-
-
-
