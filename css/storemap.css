@@ -23,8 +23,9 @@ h5, #list {
 }
 
 .anyClass {
-  height: 120px;
+  height: 150px;
   overflow-y: scroll;
+  background-color: #F8F8F8;
 }
 
 .fa-map-pin {

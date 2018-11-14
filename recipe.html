@@ -68,7 +68,6 @@
         <li class="filterDiv glu veg lac pea" onclick='darkClick(this, ["lettuce", "broccoli", "tomato"])'><b>Salad</b><br>Ingredients: Lettuce, Broccoli, Tomato</li>
         <li class="filterDiv glu pea" onclick='darkClick(this, ["bacon", "eggs", "milk"])'><b>Power Breakfast</b><br>Ingredients: Bacon, Eggs, Milk</li>
         <li class="filterDiv glu veg lac pea" onclick='darkClick(this, ["chicken", "eggs"])'><b>All Cooped Up</b><br>Ingredients: Chicken, Eggs</li>
-        <li class="filterDiv glu pea" onclick='darkClick(this, ["bacon", "eggs", "milk"])'><b>Power Breakfast</b><br>Ingredients: Bacon, Eggs, Milk</li>
         <li class="filterDiv glu lac pea" onclick='darkClick(this, ["bacon", "lettuce", "tomato"])'><b>BLT Mix</b><br>Ingredients: Bacon, Lettuce, Tomato</li>
         <li class="filterDiv glu pea" onclick='darkClick(this, ["milk", "apples", "broccoli"])' ><b>Snack pack</b><br>Ingredients: Milk, Apples, Broccoli</li>
         <li class="filterDiv glu lac pea" onclick='darkClick(this, ["lettuce", "broccoli", "tomato", "chicken"])'><b>Chicken Salad</b><br>Ingredients: Lettuce, Broccoli, Tomato, Chicken</li>
@@ -89,7 +88,7 @@
         <a href="#" onclick="saveMyList()" id="nextH">
             <button type="button" class="btn btn-outline-secondary" id="next">
                 <i class="fas fa-arrow-right"></i>
-                Next
+                Load Map
             </button>
         </a>
     </div>
@@ -101,7 +100,7 @@
           alert("No recipe selected! Please select one recipe!");
           // document.getElementById("next").href="#";
         } else {
-          document.getElementById("nextH").href="storemap.html";
+          document.getElementById("nextH").href="loading.html";
         }
       };
     </script>
