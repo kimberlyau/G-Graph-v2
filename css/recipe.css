@@ -1,19 +1,23 @@
 body {
   margin-left: 7.5%;
   margin-right: 7.5%;
+  font-family: 'Comfortaa';
 }
 
 h1 {
   text-align: center;
+  margin-top: 10px;
 }
 
 h5 {
-  margin-top: 5px;
+  margin-top: 10px;
+  font-weight: bold;
 }
+
 .searchcontainer {
   padding-left: 15%;
   padding-right: 15%;
-  margin-top: 15%;
+  margin-top: 5%;
 }
 
 .navibar {
