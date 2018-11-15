@@ -1,3 +1,6 @@
+let myList = [];
+let check = 0;
+
 function myFunction() {
   var input, filter, ul, li, a, i;
 
@@ -48,3 +51,63 @@ function filterSelection(c) {
     }
   }
 }
+
+// function initResults(){
+//   //creates search results
+//   var ul = document.getElementById("myUL");
+//   for(var i = 0; i<ingredients.length; i++){
+//     var addToList =
+//     '<li>'
+//     + '<a onclick="updateResults(this)">'
+//     + '<b>'
+//     + ingredients[i]
+//     + '</b>'
+//     + '</a>'
+//     + '</li>';
+//     ul.innerHTML += addToList;
+//
+//     //creates lists that's already loaded
+//   }
+//   var getList = JSON.parse(localStorage.getItem("myList"));
+//     if(getList != myList) myList = getList; //myList is empty currently
+//     for(var i=0; i<getList.length; i++){
+//       show[ingredients.indexOf(getList[i])] = true;
+//     }
+//    console.log();
+//
+//
+// }
+function darkClick (elmnt, lst) {
+  myList = lst;
+  if (check == 0) {
+    elmnt.style.color = 'blue';
+    check = check + 1;
+    selectedStore = elmnt.innerHTML.toUpperCase();
+  } else {
+    elmnt.style.color = 'black';
+    check = check - 1;
+  }
+
+  localStorage.setItem('recipeCounter', check);
+  localStorage.setItem('myList', JSON.stringify(myList));
+}
+
+function saveMyList(elmnt){
+  localStorage.setItem('myList', JSON.stringify(myList));
+}
+
+// (function(window, document, undefined){
+//
+//     // code that should be taken care of right away
+//
+//     window.onload = init;
+//
+//       function init(){
+//         // the code to be called when the dom has loaded
+//         // #document has its nodes
+//         initResults();
+//         displayIngredients();
+//
+//       }
+//
+// })(window, document, undefined);

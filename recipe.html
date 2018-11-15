@@ -65,42 +65,46 @@
 
       <!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
       <ul class="container scrollyboi" id="myUL">
-        <li class="filterDiv glu veg lac pea"><b>Salad</b><br>Ingredients: Lettuce, Broccoli, Tomato</li>
-        <li class="filterDiv glu pea"><b>Power Breakfast</b><br>Ingredients: Bacon, Eggs, Milk</li>
-        <li class="filterDiv glu veg lac pea"><b>All Cooped Up</b><br>Ingredients: Chicken, Eggs</li>
-        <li class="filterDiv glu pea"><b>Power Breakfast</b><br>Ingredients: Bacon, Eggs, Milk</li>
-        <li class="filterDiv glu veg lac pea"><b>Salad</b><br>Ingredients: Lettuce, Broccoli, Tomato</li>
-        <li class="filterDiv glu pea"><b>Power Breakfast</b><br>Ingredients: Bacon, Eggs, Milk</li>
-        <li class="filterDiv glu veg lac pea"><b>Salad</b><br>Ingredients: Lettuce, Broccoli, Tomato</li>
-        <li class="filterDiv glu pea"><b>Power Breakfast</b><br>Ingredients: Bacon, Eggs, Milk</li>
+        <li class="filterDiv glu veg lac pea" onclick='darkClick(this, ["lettuce", "broccoli", "tomato"])'><b>Salad</b><br>Ingredients: Lettuce, Broccoli, Tomato</li>
+        <li class="filterDiv glu pea" onclick='darkClick(this, ["bacon", "eggs", "milk"])'><b>Power Breakfast</b><br>Ingredients: Bacon, Eggs, Milk</li>
+        <li class="filterDiv glu veg lac pea" onclick='darkClick(this, ["chicken", "eggs"])'><b>All Cooped Up</b><br>Ingredients: Chicken, Eggs</li>
+        <li class="filterDiv glu pea" onclick='darkClick(this, ["bacon", "eggs", "milk"])'><b>Power Breakfast</b><br>Ingredients: Bacon, Eggs, Milk</li>
+        <li class="filterDiv glu lac pea" onclick='darkClick(this, ["bacon", "lettuce", "tomato"])'><b>BLT Mix</b><br>Ingredients: Bacon, Lettuce, Tomato</li>
+        <li class="filterDiv glu pea" onclick='darkClick(this, ["milk", "apples", "broccoli"])' ><b>Snack pack</b><br>Ingredients: Milk, Apples, Broccoli</li>
+        <li class="filterDiv glu lac pea" onclick='darkClick(this, ["lettuce", "broccoli", "tomato", "chicken"])'><b>Chicken Salad</b><br>Ingredients: Lettuce, Broccoli, Tomato, Chicken</li>
+        <li class="filterDiv glu pea"onclick='darkClick(this, ["eggs", "milk"])'><b>Pudding</b><br>Ingredients: Eggs, Milk</li>
       </ul>
 
-      <!-- Search results -->
-      <!-- <ul id="myUL">
-        <li><a class="filterDiv cars" id="Jons" href="#" onclick=""><b>Jons La Jolla</b><br>1234 E Street 92122</a></li>
-        <li><a id="Vons" href="#" onclick=""><b>Vons La Jolla</b><br>4567 D Street 92022</a></li>
-        <li><a id="Rons" href="#" onclick=""><b>Rons Temecula</b><br>8901 M Street 92012</a></li>
-        <li><a id="Quans" href="#" onclick=""><b>(Hit The) Quan's San Diego</b><br>4321 L Street 93222</a></li>
-        <li><a id="Dons" href="#" onclick=""><b>Dons Little Italy </b><br>4567 Z Street 92120</a></li>
-      </ul> -->
 
     </div>
 
     <div>
         <!-- Arrow back -->
-        <a href="location.html">
+        <a href="location.html" onclick="saveMyList()" id="backH">
             <button type="button" class="btn btn-outline-secondary" id="back">
                 <i class="fas fa-arrow-left"></i>
                 Back
             </button>
         </a>
-        <a href="storemap.html" onclick="saveStore()">
-            <button type="button" class="btn btn-outline-secondary" id="back">
+        <a href="#" onclick="saveMyList()" id="nextH">
+            <button type="button" class="btn btn-outline-secondary" id="next">
                 <i class="fas fa-arrow-right"></i>
                 Next
             </button>
         </a>
     </div>
+
+
+    <script type="text/javascript">
+      document.getElementById("next").onclick = function() {
+        if (localStorage.getItem('recipeCounter') == 0) {
+          alert("No recipe selected! Please select one recipe!");
+          // document.getElementById("next").href="#";
+        } else {
+          document.getElementById("nextH").href="storemap.html";
+        }
+      };
+    </script>
 
 </body>
 
