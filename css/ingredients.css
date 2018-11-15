@@ -1,7 +1,22 @@
+body {
+  font-family: 'Comfortaa';
+}
+
 .right{
     float:right;
 }
 
 #list {
   margin-bottom: 10px;
+}
+
+h3, #storeName {
+  text-align: center;
+}
+
+/* Scrolly */
+.scrollyboi {
+  height: 300px;
+  overflow-y: scroll;
+  background-color: #F8F8F8;
 }
