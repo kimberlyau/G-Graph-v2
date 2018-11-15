@@ -61,14 +61,15 @@
         <button class="btn" onclick="filterSelection('lac')">Lactose-Free</button>
         <button class="btn" onclick="filterSelection('pea')">Peanut-Free</button>
       </div>
-      <!-- let ingredients = ["bacon", "chicken", "eggs", "milk", "apples", "broccoli", "lettuce" ]; -->
+
+      <h4 id="itemCount"></h4>
 
       <!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
       <ul class="container scrollyboi" id="myUL">
         <li class="filterDiv glu veg lac pea" onclick='darkClick(this, ["lettuce", "broccoli", "tomato"])'><b>Salad</b><br>Ingredients: Lettuce, Broccoli, Tomato</li>
         <li class="filterDiv glu pea" onclick='darkClick(this, ["bacon", "eggs", "milk"])'><b>Power Breakfast</b><br>Ingredients: Bacon, Eggs, Milk</li>
-        <li class="filterDiv glu veg lac pea" onclick='darkClick(this, ["chicken", "eggs"])'><b>All Cooped Up</b><br>Ingredients: Chicken, Eggs</li>
-        <li class="filterDiv glu lac pea" onclick='darkClick(this, ["bacon", "lettuce", "tomato"])'><b>BLT Mix</b><br>Ingredients: Bacon, Lettuce, Tomato</li>
+        <li class="filterDiv glu lac pea" onclick='darkClick(this, ["chicken", "eggs"])'><b>All Cooped Up</b><br>Ingredients: Chicken, Eggs</li>
+        <li class="filterDiv lac pea" onclick='darkClick(this, ["bacon", "lettuce", "tomato"])'><b>BLT Mix</b><br>Ingredients: Bacon, Lettuce, Tomato</li>
         <li class="filterDiv glu pea" onclick='darkClick(this, ["milk", "apples", "broccoli"])' ><b>Snack pack</b><br>Ingredients: Milk, Apples, Broccoli</li>
         <li class="filterDiv glu lac pea" onclick='darkClick(this, ["lettuce", "broccoli", "tomato", "chicken"])'><b>Chicken Salad</b><br>Ingredients: Lettuce, Broccoli, Tomato, Chicken</li>
         <li class="filterDiv glu pea"onclick='darkClick(this, ["eggs", "milk"])'><b>Pudding</b><br>Ingredients: Eggs, Milk</li>
@@ -103,6 +104,10 @@
           document.getElementById("nextH").href="loading.html";
         }
       };
+
+      // function toggleH4 (n) {
+      //   document.getElementById("itemCount").text =  n + " item(s) found!";
+      // }
     </script>
 
 </body>

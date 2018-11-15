@@ -15,9 +15,11 @@ function myFunction() {
   if (filter.length == 0) {
     for (i = 0; i < li.length; i++) {
           li[i].style.display = "none";
-        }
+      }
+      localStorage.setItem('emptySearch', "true");
     }
   else {
+    localStorage.setItem('emptySearch', "false");
     for (i = 0; i < li.length; i++) {
         recipe = li[i].innerHTML;
         if (recipe.toUpperCase().replace('<br>', '').replace('<b>', '').replace('</b>', '').toUpperCase().indexOf(filter) > -1) {
@@ -40,16 +42,36 @@ function myFunction() {
 function filterSelection(c) {
   myFunction();
   var x, i;
+  let num = 0;
   x = document.getElementsByClassName("filterDiv");
-  if (c == "all") c = "";
-  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
-  for (i = 0; i < x.length; i++) {
-    // x[i].style.display = "none";
-    if (x[i].className.indexOf(c) <= -1) {
-      // w3AddClass(x[i], "show");
-      x[i].style.display = "none";
+
+  // Empty Search
+  if (localStorage.getItem('emptySearch') == "true") {
+    for (i = 0; i < x.length; i++) {
+      if (x[i].className.indexOf(c) <= -1) {
+        x[i].style.display = "none";
+      } else {
+        x[i].style.display = "block";
+        num = num + 1;
+      }
+    }
+
+  }
+
+  else {
+    num = x.length;
+    for (i = 0; i < x.length; i++) {
+      // Hide if filtered out
+      if (x[i].className.indexOf(c) <= -1) {
+        x[i].style.display = "none";
+        num = num - 1;
+      }
     }
   }
+
+  alert(num + " item(s) found!");
+  // toggleH4(num);
+
 }
 
 // function initResults(){
