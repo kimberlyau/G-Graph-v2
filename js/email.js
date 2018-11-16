@@ -38,6 +38,7 @@ function initModal(){    //Taken from w3schools
     saveAs.onclick = function() {
         if(localStorage.getItem('nextToggle') == 'recipe'){
             saveRecipe();
+            document.getElementById("recipeOnly").href = "done.html";
         }
         else {
             modal.style.display = "block";
