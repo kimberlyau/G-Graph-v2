@@ -63,7 +63,7 @@ li {
   list-style-type: circle;
 }
 
-#myUL li {
+#myUL li a{
   border: 1px solid #ddd;
   margin-top: -1px; /* Prevent double borders */
   background-color: #f6f6f6;
@@ -73,7 +73,7 @@ li {
   color: black;
 }
 
-#myUL li:hover:not(.header) {
+#myUL li a:hover:not(.header) {
   background-color: #eee;
 }
 

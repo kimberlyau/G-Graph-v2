@@ -38,6 +38,7 @@ function initModal(){    //Taken from w3schools
     saveAs.onclick = function() {
         if(localStorage.getItem('nextToggle') == 'recipe'){
             saveRecipe();
+            document.getElementById("recipeOnly").href = "done.html";
         }
         else {
             modal.style.display = "block";
@@ -125,7 +126,7 @@ function saveRecipe(){
     var newRecipe = [];
     newRecipe.push(localStorage.getItem("recipeName"));
     newRecipe.push(JSON.parse(localStorage.getItem("myList")));
-    newRecipe.push(["first step", "second step"]);
+    newRecipe.push([]);
     var savedRecipe = JSON.parse(localStorage.getItem("savedRecipes"));
     savedRecipe.push(newRecipe)
     localStorage.setItem("savedRecipes", JSON.stringify(savedRecipe));
@@ -161,9 +162,9 @@ function displaySummary(){
         }
         add +=
                 '</ul></div>'
-        
+
         if(isRecipe){
-            add+='<br><b>Steps:</b>'; //insert code here TOOODOOOOOOO
+            add+='<br><b></b>'; // TODO
         }
         add+= '</div>'
         +   '</div>'

@@ -60,7 +60,14 @@ function saveStore (elmnt) {
 
   // }
   if (localStorage.getItem('nextToggle') == "recipe") {
-    elmnt.href="recipe.html";
+    if(localStorage.getItem("fromList") == ""){
+      elmnt.href="recipe.html";
+
+    }
+    else{
+      console.log("here");
+      elmnt.href="storemap.html";
+    }
   }
 
   else {
