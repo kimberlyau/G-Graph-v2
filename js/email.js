@@ -119,6 +119,8 @@ function saveList(){
     localStorage.setItem("savedLists", JSON.stringify(savedLists));
 }
 
+
+//name, then ingredients, then steps
 function saveRecipe(){
     var newRecipe = [];
     newRecipe.push(localStorage.getItem("recipeName"));

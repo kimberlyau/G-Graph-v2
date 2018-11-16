@@ -35,10 +35,10 @@
     </div>
 
     <div class="btn-group btn-group-toggle" data-toggle="buttons">
-        <label class="btn btn-secondary active btn-outline-secondary">
+        <label class="btn btn-secondary active btn-outline-secondary" onclick="showSaved(true)">
           <input type="radio" name="options" id="option1" autocomplete="off" checked> My Shopping List
         </label>
-        <label class="btn btn-secondary btn-outline-secondary">
+        <label class="btn btn-secondary btn-outline-secondary" onclick="showSaved(false)">
           <input type="radio" name="options" id="option2" autocomplete="off"> My Recipes
         </label>
         
@@ -58,7 +58,7 @@
 
 </body>
 <script>
-  showSavedList();
+  showSaved(true);
 </script>
 
 </html>
