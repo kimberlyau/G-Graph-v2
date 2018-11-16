@@ -36,15 +36,20 @@ function initModal(){    //Taken from w3schools
 
     // When the user clicks on the button, open the modal
     saveAs.onclick = function() {
-        modal.style.display = "block";
-
-        //depends on whether you are shopping from a saved list or not
-        if(localStorage.getItem("fromList") === ""){
-            switchView(false, modal1, modal2);
-            overwrite = -1;
+        if(localStorage.getItem('nextToggle') == 'recipe'){
+            saveRecipe();
         }
-        else{
-            switchView(true, modal1, modal2);
+        else {
+            modal.style.display = "block";
+
+            //depends on whether you are shopping from a saved list or not
+            if(localStorage.getItem("fromList") === ""){
+                switchView(false, modal1, modal2);
+                overwrite = -1;
+            }
+            else{
+                switchView(true, modal1, modal2);
+            }
         }
     }
 
@@ -111,24 +116,54 @@ function saveList(){
         savedLists.push(newList);
     }
     console.log(savedLists);
-
     localStorage.setItem("savedLists", JSON.stringify(savedLists));
 }
 
+function saveRecipe(){
+    var newRecipe = [];
+    newRecipe.push(localStorage.getItem("recipeName"));
+    newRecipe.push(JSON.parse(localStorage.getItem("myList")));
+    newRecipe.push(["first step", "second step"]);
+    var savedRecipe = JSON.parse(localStorage.getItem("savedRecipes"));
+    savedRecipe.push(newRecipe)
+    localStorage.setItem("savedRecipes", JSON.stringify(savedRecipe));
+    console.log(savedRecipe);
+}
+
 function displaySummary(){
+    var completeName = document.getElementById("completeName");
+    if(localStorage.getItem('nextToggle') == 'recipe'){
+        completeName.innerText+=' recipe?';
+    }
+    else{
+        completeName.innerText+=' list?';
+    }
+
+
     var summary = document.getElementById("summary");
     var selectedStore = localStorage.getItem("selectedStore");
     var myList = JSON.parse(localStorage.getItem("myList"));
-    var add ='<div>'
+    var isRecipe = localStorage.getItem('nextToggle') == 'recipe';
+    var add = "";
+    if(isRecipe){
+        add+= '<h3 id="underline">'+localStorage.getItem("recipeName")+'</h3>'
+    }
+    add +='<div>'
         +  '<div class="panel-body" id="testing">'
-        +   '<b>Store:</b> ' + selectedStore
-        +    '<br><div><b>List:</b><ul>';
+    if(!isRecipe){
+     add +=   '<b>Store:</b> ' + selectedStore
+    }
+    add +=    '<div><br><b>List:</b><ul>';
         for(var j =0; j<myList.length; j++){
             add += '<li>' + myList[j] + '</li>';
         }
         add +=
                 '</ul></div>'
-        +     '</div>'
+        
+        if(isRecipe){
+            add+='<br><b>Steps:</b>'; //insert code here TOOODOOOOOOO
+        }
+        add+= '</div>'
         +   '</div>'
     console.log(add);
     summary.innerHTML = add;

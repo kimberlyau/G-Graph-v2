@@ -53,15 +53,7 @@ function showSavedList() {
         }
         accordion.innerHTML = add;
     }
-        // var showIngred = document.getElementById("testing");
-        // showIngred.innerHTML = "";
-        // showIngred.innerHTML += "<ul>";
-        // for (var i = 0; i < listFood.length; i++) {
-        //     var foodBullets = document.createElement("li");
-        //     foodBullets.innerHTML = listFood[i];
-        //     showIngred.appendChild(foodBullets);
-        // }
-        // showIngred.innerHTML += "</ul>";
+
     }
 
 function deleteList(elem){

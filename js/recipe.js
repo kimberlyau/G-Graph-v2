@@ -110,6 +110,10 @@ function darkClick (elmnt, lst) {
     check = check - 1;
   }
 
+  var idx = elmnt.innerText.indexOf("Ingredients:") 
+  var recipename = elmnt.innerText.substr(0, idx);
+  
+  localStorage.setItem("recipeName", recipename)
   localStorage.setItem('recipeCounter', check);
   localStorage.setItem('myList', JSON.stringify(myList));
 }
