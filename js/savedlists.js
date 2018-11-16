@@ -43,7 +43,7 @@ function showSavedList() {
             +        '<i class="fas fa-shopping-cart"></i>'
             +      '</button></a>'
 
-            + '<a href="ingredients.html" class="right" onclick="shopList(this)" id="shop' + i + '"><button type="button" class="btn btn-primary">'
+            + '<a href="location.html" class="right" onclick="shopList(this)" id="shop' + i + '"><button type="button" class="btn btn-primary">'
             +        '<i class="fas fa-edit"></i>'
             +      '</button></a>'
 
