@@ -1,15 +1,17 @@
 let myList = [];
 let check = 0;
 
+var recipesHow = [["Chop lettuce, broccoli, lettuce, and tomato together to create a Salad."], 
+  ["Cook the bacon until crispy.", "Scrabble the eggs.", " Pour out a cup of milk for a Power Breakfast!"], 
+  ["Season the chicken with salt and pepper, then cook until golden brown", "Finally boil the eggs for a 'All Cooped Up' Meal."], 
+  ["To create a BLT Mix, fry up some bacon.", " Then dice the tomato.", " Lastly, slice the lettuce into bite size pieces."],
+  ["Slice the apple and broccoli.", " Pour out a cup of milk for a snack."],
+  ["Chop and blanch the broccoli into boiling water for five minutes.", " Season the chicken with salt and pepper, then cook until golden brown.", " Slice the tomatoes, chicken and lettuce.", " Put everything together to create the perfect chicken salad."],
+   ["Mix eggs and milk together, then simmer until boiling for pudding."]];
+
 function myFunction() {
   var input, filter, ul, li, a, i;
-  var recipesHow = ["Chop lettuce, broccoli, lettuce, and tomato together to create a Salad.", 
-  "Cook the bacon until crispy. Scrabble the eggs. Pour out a cup of milk for a Power Breakfast!", 
-  "Season the chicken with salt and pepper, then cook until golden brown. Finally boil the eggs for a 'All Cooped Up' Meal.", 
-  "To create a BLT Mix, fry up some bacon. Then dice the tomato. Lastly, slice the lettuce into bite size pieces.",
-  "Slice the apple and broccoli. Pour out a cup of milk for a snack.",
-  "Chop and blanch the broccoli into boiling water for five minutes. Season the chicken with salt and pepper, then cook until golden brown. Slice the tomatoes, chicken and lettuce. Put everything together to create the perfect chicken salad.",
-   "Mix eggs and milk together, then simmer until boiling for pudding."];
+  
 
   // Text input
   input = document.getElementById("myInput");
