@@ -95,8 +95,10 @@
 
 
     <script type="text/javascript">
+      localStorage.setItem("recipeName", "");
+
       document.getElementById("next").onclick = function() {
-        if (localStorage.getItem('recipeCounter') == 0) {
+        if (localStorage.getItem('recipeName') == "") {
           alert("No recipe selected! Please select one recipe!");
           // document.getElementById("next").href="#";
         } else {
@@ -104,9 +106,6 @@
         }
       };
 
-      // function toggleH4 (n) {
-      //   document.getElementById("itemCount").text =  n + " item(s) found!";
-      // }
     </script>
 
 </body>

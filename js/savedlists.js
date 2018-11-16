@@ -29,7 +29,7 @@ function showSaved(bool) {
         var display;
         if(bool){display = 'create a list';}
         else{
-            display = 'save a recipe'; 
+            display = 'save a recipe';
         }
         accordion.innerHTML = '<div> There is nothing to display here, please ' + display + ' :) </div>'
     }
@@ -52,7 +52,7 @@ function showSaved(bool) {
                 +        '<a href="storemap.html" class="right" onclick="shopList(this)" id="shop' + i + '"><button type="button" class="btn btn-success">'
                 +        '<i class="fas fa-shopping-cart"></i>'
                 +      '</button></a>'
-    
+
                 + '<a href="location.html" class="right" onclick="shopList(this)" id="shop' + i + '"><button type="button" class="btn btn-primary">'
                 +        '<i class="fas fa-edit"></i>'
                 +      '</button></a>';
@@ -61,21 +61,21 @@ function showSaved(bool) {
                 container = '<button type="button" class="btn btn-danger right" id="row' + i + '" onclick="deleteList(this)">'
                 +        '<i class="fas fa-minus"></i>'
                 +      '</button>'
-                
+
                 body = 'Ingredients: ' + '<ul>';
                 for(var j = 0; j<savedLists[i][1].length; j++){
                     body+='<li>' + savedLists[i][1][j] + '</li>';
                 }
-                body +='</ul>';
-
-                body += 'Steps: ' + '<ol>';
-                for(var j = 0; j<savedLists[i][2].length; j++){
-                    body+='<li>' + savedLists[i][2][j] + '</li>';
-                }
-                body +='</ol>'
-                +        '<a href="location.html" class="right" onclick="shopList(this)" id="shop' + i + '"><button type="button" class="btn btn-success">'
-                +        '<i class="fas fa-shopping-cart"></i>'
-                +      '</button></a>';
+                // body +='</ul>';
+                //
+                // body += 'Steps: ' + '<ol>';
+                // for(var j = 0; j<savedLists[i][2].length; j++){
+                //     body+='<li>' + savedLists[i][2][j] + '</li>';
+                // }
+                // body +='</ol>'
+                // +        '<a href="location.html" class="right" onclick="shopList(this)" id="shop' + i + '"><button type="button" class="btn btn-success">'
+                // +        '<i class="fas fa-shopping-cart"></i>'
+                // +      '</button></a>';
 
             }
 
@@ -90,7 +90,7 @@ function showSaved(bool) {
             + i + '" aria-expanded="true"'
             +      'aria-controls="collapseOne">'
             +      savedLists[i][0]
-            
+
             +    '</button>'
             +    container
             +  '</h5>'
@@ -98,7 +98,7 @@ function showSaved(bool) {
 
             +'<div id="collapse' + i + '" class="collapse card-header" aria-labelledby="headingOne" data-parent="#accordion">'
             +  '<div class="panel-body" id="testing">'
-            
+
             + body
 
             +     '</div>'
@@ -117,7 +117,7 @@ function deleteList(elem){
     var savedLists;
     if(showList){savedLists = JSON.parse(localStorage.getItem("savedLists"));}
     else{savedLists = JSON.parse(localStorage.getItem("savedRecipes"));}
-    
+
     //savedLists = savedLists.splice(id, 1);
     var newList = [];
     for(var i = 0; i<savedLists.length; i++){
@@ -129,7 +129,7 @@ function deleteList(elem){
     else{
         localStorage.setItem("savedRecipes", JSON.stringify(newList));
     }
-    
+
     showSaved(showList);
 
 }
@@ -139,7 +139,7 @@ function shopList(elem){
     var id = parseInt(getList.substr(4, getList.length));
 
     var saved;
-    if(showList){ 
+    if(showList){
         saved = JSON.parse(localStorage.getItem("savedLists"));
         localStorage.setItem("myList", JSON.stringify(saved[id][2]));
         localStorage.setItem("selectedStore", saved[id][1]);
@@ -179,5 +179,3 @@ var saveAccordion;
 function saveAcc() {
     localStorage.setItem('saveAccordion', saveAccordion);
 }
-
-

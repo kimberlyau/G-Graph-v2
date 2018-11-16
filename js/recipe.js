@@ -1,5 +1,4 @@
 let myList = [];
-let check = 0;
 
 function myFunction() {
   var input, filter, ul, li, a, i;
@@ -83,7 +82,10 @@ function filterSelection(c) {
 
 }
 
+var check = 0;
+
 function darkClick (elmnt, lst) {
+
   myList = lst;
   if (check == 0) {
     elmnt.style.color = 'blue';
