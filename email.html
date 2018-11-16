@@ -3,9 +3,10 @@
 
 <head>
   <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
     crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
 
   <!-- jQuery library -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -31,12 +32,13 @@
   </div>
 
   <div>
-    <h2> Here's a Summary:</h2>
+    <h2 id="completeName">Would you like to save this</h2>
+
+    <!-- <h4 align="center">Would you like to save the list?</h4> -->
 
     <div id="summary"></div>
 
-
-    <h4 align="center">Would you like to save the above list?</h4>
+    <br>
 
     <div class="row">
     <a href="lists.html" class="row text-center">
@@ -48,8 +50,11 @@
     <!--Space for buttons-->
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-    <a href="done.html" onclick="saveList()">
-      <button type="button" class="btn btn-outline-secondary">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <a class="row text-center" id="recipeOnly">
+      <button type="button" id="saveAs" class="btn btn-outline-secondary">
+
         <i class="fa fa-check-circle fa-10x"></i>
       </button>
     </a>
@@ -61,7 +66,40 @@
       Back
     </button>
   </a>
-</div>
+
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+      </div>
+      <div class="modal-body">
+          <h5>Do you want to:</h5>
+          <button type="button" id="overwrite" class="btn btn-outline-secondary">
+            Overwrite my List
+          </button>
+          <button type="button" id="newList" class="btn btn-outline-secondary">
+            Save as new
+          </button>
+        </div>
+      <div class="modal-body">
+       <h5>Name your List:</h5>
+       <input type="text" class="form-control" id="listName">
+       <a href="done.html" class="text-center" onclick="saveList()">
+          <button type="button" class="btn btn-outline-secondary">
+            Save
+          </button>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+<!--  href="done.html"-->
+
 
 </body>
 

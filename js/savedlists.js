@@ -1,19 +1,87 @@
+var showList= false; //list or recipe
+
+function showSaved(bool) {
+    //just returns if doing unnecessary work of adding everything again
+    // if(bool == showList){
+    //     return;
+    // }
+
+    showList = bool;
+
+    var savedLists;
+    if(bool){
+        savedLists = JSON.parse(localStorage.getItem("savedLists"));
+        console.log("here")
+    }
+
+    else{
+        savedLists = JSON.parse(localStorage.getItem("savedRecipes"));
+    }
+
+    console.log(savedLists);
 
 
-
-function showSavedList() {
-
-    var savedLists = JSON.parse(localStorage.getItem("savedLists"));
     var accordion = document.getElementById("accordion");
     var add = "";
 
     if(savedLists.length == 0){
         console.log("here");
-        accordion.innerHTML = '<div> There is nothing to display here, please create a list :) </div>';
+        var display;
+        if(bool){display = 'create a list';}
+        else{
+            display = 'save a recipe';
+        }
+        accordion.innerHTML = '<div> There is nothing to display here, please ' + display + ' :) </div>'
     }
 
     else{
         for(var i = 0; i<savedLists.length; i++){
+            var container, body= "";
+            if(bool){
+                container = '<button type="button" class="btn btn-danger right" id="row' + i + '" onclick="deleteList(this)">'
+                +        '<i class="fas fa-minus"></i>'
+                +      '</button>';
+
+                body = 'Store: ' + savedLists[i][1];
+                +    '<ul>';
+                for(var j = 0; j<savedLists[i][2].length; j++){
+                    body+='<li>' + savedLists[i][2][j] + '</li>';
+                }
+                body +=
+                        '</ul>'
+                +        '<a href="storemap.html" class="right" onclick="shopList(this)" id="shop' + i + '"><button type="button" class="btn btn-success">'
+                +        '<i class="fas fa-shopping-cart"></i>'
+                +      '</button></a>'
+
+                + '<a href="location.html" class="right" onclick="shopList(this)" id="shop' + i + '"><button type="button" class="btn btn-primary">'
+                +        '<i class="fas fa-edit"></i>'
+                +      '</button></a>';
+            }
+            else{
+                container = '<button type="button" class="btn btn-danger right" id="row' + i + '" onclick="deleteList(this)">'
+                +        '<i class="fas fa-minus"></i>'
+                +      '</button>'
+
+                body = 'Ingredients: ' + '<ul>';
+                for(var j = 0; j<savedLists[i][1].length; j++){
+                    body+='<li>' + savedLists[i][1][j] + '</li>';
+                }
+                // body +='</ul>';
+                //
+                // body += 'Steps: ' + '<ol>';
+                // for(var j = 0; j<savedLists[i][2].length; j++){
+                //     body+='<li>' + savedLists[i][2][j] + '</li>';
+                // }
+                // body +='</ol>'
+                // +        '<a href="location.html" class="right" onclick="shopList(this)" id="shop' + i + '"><button type="button" class="btn btn-success">'
+                // +        '<i class="fas fa-shopping-cart"></i>'
+                // +      '</button></a>';
+
+            }
+
+
+
+
             add +=
             '<div class="card template">'
             + '<div class="card-header" id="headingOne">'
@@ -21,31 +89,17 @@ function showSavedList() {
             +   '<button class="btn btn-link" data-toggle="collapse" data-target="#collapse'
             + i + '" aria-expanded="true"'
             +      'aria-controls="collapseOne">'
-            +      "List " + (i+1)
-            
+            +      savedLists[i][0]
+
             +    '</button>'
-            +    '<button type="button" class="btn btn-danger right" id="row' + i + '" onclick="deleteList(this)">'
-            +        '<i class="fas fa-minus"></i>'
-            +      '</button>'
+            +    container
             +  '</h5>'
             +'</div>'
 
             +'<div id="collapse' + i + '" class="collapse card-header" aria-labelledby="headingOne" data-parent="#accordion">'
             +  '<div class="panel-body" id="testing">'
-            +   'Store: ' + savedLists[i][savedLists[i].length-1];
-            +    '<ul>';
-            for(var j =0; j<savedLists[i].length-1; j++){
-                add+='<li>' + savedLists[i][j] + '</li>';
-            }
-            add +=
-                    '</ul>'
-            +        '<a href="storemap.html" class="right" onclick="shopList(this)" id="shop' + i + '"><button type="button" class="btn btn-success">'
-            +        '<i class="fas fa-shopping-cart"></i>'
-            +      '</button></a>'
 
-            + '<a href="ingredients.html" class="right" onclick="shopList(this)" id="shop' + i + '"><button type="button" class="btn btn-primary">'
-            +        '<i class="fas fa-edit"></i>'
-            +      '</button></a>'
+            + body
 
             +     '</div>'
             +   '</div>'
@@ -53,39 +107,54 @@ function showSavedList() {
         }
         accordion.innerHTML = add;
     }
-        // var showIngred = document.getElementById("testing");
-        // showIngred.innerHTML = "";
-        // showIngred.innerHTML += "<ul>";
-        // for (var i = 0; i < listFood.length; i++) {
-        //     var foodBullets = document.createElement("li");
-        //     foodBullets.innerHTML = listFood[i];
-        //     showIngred.appendChild(foodBullets);
-        // }
-        // showIngred.innerHTML += "</ul>";
-    }
+
+}
 
 function deleteList(elem){
     var getList = $(elem).attr('id');
     var id = parseInt(getList.substr(3, getList.length));
     console.log(id);
-    var savedLists = JSON.parse(localStorage.getItem("savedLists"));
+    var savedLists;
+    if(showList){savedLists = JSON.parse(localStorage.getItem("savedLists"));}
+    else{savedLists = JSON.parse(localStorage.getItem("savedRecipes"));}
+
     //savedLists = savedLists.splice(id, 1);
     var newList = [];
     for(var i = 0; i<savedLists.length; i++){
         if(i!=id){ newList.push(savedLists[i]);}
     }
-    localStorage.setItem("savedLists", JSON.stringify(newList));
-    showSavedList();
+    if(showList){
+        localStorage.setItem("savedLists", JSON.stringify(newList));
+    }
+    else{
+        localStorage.setItem("savedRecipes", JSON.stringify(newList));
+    }
+
+    showSaved(showList);
 
 }
 
 function shopList(elem){
     var getList = $(elem).attr('id');
     var id = parseInt(getList.substr(4, getList.length));
-    var savedLists = JSON.parse(localStorage.getItem("savedLists"));
-    var end = savedLists[id].length-1;
-    localStorage.setItem("myList", JSON.stringify(savedLists[id].slice(0, end)));
-    localStorage.setItem("selectedStore", savedLists[id][end]);
+
+    var saved;
+    if(showList){
+        saved = JSON.parse(localStorage.getItem("savedLists"));
+        localStorage.setItem("myList", JSON.stringify(saved[id][2]));
+        localStorage.setItem("selectedStore", saved[id][1]);
+        localStorage.setItem('nextToggle', "shopping");
+    }
+    else {
+        saved = JSON.parse(localStorage.getItem("savedRecipes"));
+        localStorage.setItem("myList", JSON.stringify(saved[id][1]));
+        localStorage.setItem("selectedStore", "");
+        localStorage.setItem('nextToggle', "recipe");
+    }
+
+    localStorage.setItem("listName", saved[id][0]);
+    localStorage.setItem("fromList", id.toString()); //if from recipe, just used to go from location to storemap directly
+    console.log(id.toString());
 }
 
 
@@ -110,5 +179,3 @@ var saveAccordion;
 function saveAcc() {
     localStorage.setItem('saveAccordion', saveAccordion);
 }
-
-

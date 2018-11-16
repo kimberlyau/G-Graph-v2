@@ -1,6 +1,7 @@
 body {
   margin-left: 7.5%;
   margin-right: 7.5%;
+  font-family: 'Comfortaa';
 }
 
 h1 {
@@ -38,6 +39,7 @@ li {
 #back {
   /* margin-top: 25%; */
   vertical-align: bottom;
+  margin-top: 10px;
 }
 
 /* W3 School */
