@@ -126,9 +126,9 @@ function saveRecipe(){
     var newRecipe = [];
     newRecipe.push(localStorage.getItem("recipeName"));
     newRecipe.push(JSON.parse(localStorage.getItem("myList")));
-    newRecipe.push([]);
+    newRecipe.push(JSON.parse(localStorage.getItem("recipeSteps")));
     var savedRecipe = JSON.parse(localStorage.getItem("savedRecipes"));
-    savedRecipe.push(newRecipe)
+    savedRecipe.push(newRecipe);
     localStorage.setItem("savedRecipes", JSON.stringify(savedRecipe));
     console.log(savedRecipe);
 }
@@ -161,10 +161,14 @@ function displaySummary(){
             add += '<li>' + myList[j] + '</li>';
         }
         add +=
-                '</ul></div>'
+                '</ul></div>';
 
         if(isRecipe){
-            add+='<br><b></b>'; // TODO
+            var steps = JSON.parse(localStorage.getItem("recipeSteps"));
+            add+='<br><b></b>Steps:<ul>'; // TODO
+            for(var j=0; j<steps.length; j++){
+                add+='<li>' + steps[j] + '</li>';
+            }
         }
         add+= '</div>'
         +   '</div>'
