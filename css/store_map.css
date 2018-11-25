@@ -17,7 +17,8 @@ h5 {
 }
 
 label {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Inconsolata', monospace;
+  font-size: 110%;
 }
 
 #modal {
@@ -36,7 +37,7 @@ label {
   padding-right: 5%;
   margin-bottom: -7.5%;
   margin-top: 5%;
-  padding-top: 5%;
+  padding-top: 2.5%;
 }
 
 .navibar {
@@ -48,7 +49,7 @@ label {
 /* Scrolly */
 .scrollyboi {
   height: 350px;
-  /* overflow-y: scroll; */
+  overflow-y: scroll;
   /* overflow-x: auto; */
   background-color: #F8F8F8;
 }
