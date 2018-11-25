@@ -30,19 +30,24 @@ function togglePin (elmnt, index) {
         var list = document.getElementById("list");
         for(var i = 0; i<ingredients.length; i++){
             var rnum = Math.floor(Math.random() * 20) + 1;
-            var sLen = ingredients[i].length;
-            var multDash = 18;
+            var multDash = 25;
             var spacer = '-'.repeat(multDash);
+            var quant = 'Pound';
+
+            if (ingredients[i] == 'milk' || ingredients[i] == 'bacon') {
+              quant = 'Quantity';
+            }
+
             var addToList = '<div class="listItem">'
             + '<div class="form-check">'
             + `<input type="checkbox" class="form-check-input" id="materialUnchecked" onchange="togglePin(this, ${i + 1})">`
             + '<label class="form-check-label" for="materialUnchecked">'
             + ingredients[i]
-            + ' $'
-            + (Math.floor(Math.random() * 5) + 1)
+            + '   |   $'
+            + Math.floor(Math.random() * 5)
             + '.'
             + (Math.floor(Math.random() * 90) + 10)
-            + ' Per Pound<br>'
+            + ' Per ' + quant + '<br>'
             + spacer
             + ' <i>Aisle '
             + rnum

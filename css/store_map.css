@@ -17,8 +17,8 @@ h5 {
 }
 
 label {
-  font-family: 'Inconsolata', monospace;
-  font-size: 110%;
+  /* font-family: 'Inconsolata', monospace; */
+  font-size: 105%;
 }
 
 #modal {
