@@ -66,16 +66,16 @@ function showSaved(bool) {
                 for(var j = 0; j<savedLists[i][1].length; j++){
                     body+='<li>' + savedLists[i][1][j] + '</li>';
                 }
-                // body +='</ul>';
-                //
-                // body += 'Steps: ' + '<ol>';
-                // for(var j = 0; j<savedLists[i][2].length; j++){
-                //     body+='<li>' + savedLists[i][2][j] + '</li>';
-                // }
-                // body +='</ol>'
-                // +        '<a href="location.html" class="right" onclick="shopList(this)" id="shop' + i + '"><button type="button" class="btn btn-success">'
-                // +        '<i class="fas fa-shopping-cart"></i>'
-                // +      '</button></a>';
+                body +='</ul>';
+                
+                body += 'Steps: ' + '<ol>';
+                for(var j = 0; j<savedLists[i][2].length; j++){
+                    body+='<li>' + savedLists[i][2][j] + '</li>';
+                }
+                body +='</ol>'
+                +        '<a href="location.html" class="right" onclick="shopList(this)" id="shop' + i + '"><button type="button" class="btn btn-success">'
+                +        '<i class="fas fa-shopping-cart"></i>'
+                +      '</button></a>';
 
             }
 
