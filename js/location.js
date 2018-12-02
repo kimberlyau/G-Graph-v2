@@ -61,7 +61,7 @@ function saveStore (elmnt) {
   // }
   if (localStorage.getItem('nextToggle') == "recipe") {
     if(localStorage.getItem("fromList") == ""){
-      elmnt.href="recipe.html";
+      elmnt.href="storemap.html";
 
     }
     else{
@@ -71,7 +71,7 @@ function saveStore (elmnt) {
   }
 
   else {
-    elmnt.href="ingredients.html";
+    elmnt.href="storemap.html";
   }
   return false;
 }
