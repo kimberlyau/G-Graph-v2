@@ -4,6 +4,10 @@ body {
   font-family: 'Comfortaa';
 }
 
+h2 {
+  text-align: center;
+}
+
 label {
   padding-bottom: -10px;
 }

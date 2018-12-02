@@ -30,7 +30,8 @@
           <script>
             var sel = localStorage.getItem('selectedStore');
             if (sel != "") {
-              document.getElementById("name").innerHTML = sel;
+              var shortSel = sel.split(/[0-9]/)[0];
+              document.getElementById("name").innerHTML = shortSel;
             }
           </script>
 
