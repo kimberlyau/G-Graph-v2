@@ -2,9 +2,10 @@ let ingredients = ["bacon", "chicken", "eggs", "milk", "apples", "broccoli", "le
 "refried beans", "salsa", "rice", "tacos", "corn", "tortillias", "baking powder", "baking soda", "sugar",
 "brownie mix", "cake mix", "cereal", "baby food", "juice", "almond", "arugala", "artichoke", "bruscetta", "black beans", 
 "bagels", "baked beans", "beer", "fish", "bread", "cabbage", "cake", "carrots", "celery", "cheese", "chicken", 
-"chips", "chocolate", "clams", "coffee", "Garlic", "ginger", "ham", "cheeseburgers", "honey", "ice cream",
-"kale", "kabobs", "ketchup", "kiwi", "lobster", "lamb", "Pizza", "spinach", "spaghetti", "waffles",
-"wine", "walnuts", "yogurt", "zucchini", "butter", "lemon", "beef", "potato", "onion", "steak", "sausage"
+"chips", "chocolate", "clams", "coffee", "garlic", "ginger", "ham", "cheeseburgers", "honey", "ice cream",
+"kale", "kabobs", "ketchup", "kiwi", "lobster", "lamb", "pizza", "spinach", "spaghetti", "waffles",
+"wine", "walnuts", "yogurt", "zucchini", "butter", "lemon", "beef", "potato", "onion", "steak", "sausage",
+"flour", "salt", "pepper"
 ];
 let show = [];
 let myList = [];
