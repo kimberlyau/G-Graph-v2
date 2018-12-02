@@ -14,6 +14,10 @@ body {
     list-style-type: circle;
  }
 
+ button {
+   text-decoration: none;
+ }
+
   .searchcontainer {
     padding-left: 15%;
     padding-right: 15%;
@@ -181,13 +185,13 @@ display: inline-block;
   margin-top: 6px;
 }
 
-#saveQuit {
+#saveQuit, #saveQuit2 {
   background-color: #ecd0ff;
   margin: 0 auto;
   display: block;
   margin-top: 2px;
 }
 
-#shopButton {
+#saveAs2 {
   background-color: #ecd0ff;
 }

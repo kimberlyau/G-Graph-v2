@@ -70,7 +70,7 @@ function initModal(){    //Taken from w3schools
         justSave = 3;
         if(localStorage.getItem('nextToggle') == 'recipe'){
             saveRecipe();
-            document.getElementById("recipeOnly").href = "done.html";
+            document.getElementById("recipeOnly2").href = "location.html";
         }
         else {
             modal.style.display = "block";
