@@ -79,7 +79,6 @@ function filterSelection(c) {
     }
   }
 
-  alert(num + " item(s) found!");
   // toggleH4(num);
 
 }
@@ -102,7 +101,6 @@ function darkClick (elmnt, lst) {
   var recipename = elmnt.innerText.substr(0, idx);
 
   var id = parseInt($(elmnt).attr('id'));
-  alert(recipesHow[id]);
 
   localStorage.setItem("recipeName", recipename);
   localStorage.setItem("recipeSteps",  JSON.stringify(recipesHow[id]));
