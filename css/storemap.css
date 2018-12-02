@@ -14,11 +14,18 @@ label {
 
 h5 {
   padding-top: 10px;
-}
-
-h5, #list {
   margin-left: 10%;
   margin-right: 10%;
+}
+
+#list {
+  margin-left: 3%;
+  margin-right: 3%;
+  padding-left: 5%;
+}
+
+input {
+  padding-top: 5px;
 }
 
 .navibar {
@@ -28,7 +35,7 @@ h5, #list {
 }
 
 .anyClass {
-  height: 150px;
+  height: 200px;
   overflow-y: scroll;
   background-color: #F8F8F8;
 }
