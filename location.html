@@ -16,15 +16,23 @@
     <title>Hello, world!</title>
   </head>
   <body>
-    <!-- Navbar -->
-    <div class="navibar">
-      <a class="fas fa-home" id="icon" href="lists.html"></a>
-      <a class="fas fa-sign-out-alt" id="icon2" href="index.html"></a>
-      <!-- <a class="fas fa-cog" id="icon"></a> -->
+  <!-- Navbar -->
+  <div class="navibar">
+      <div class="wrapper" style="float:left;">
+        <div style="float:left;"><a class="fas fa-home" id="icon" href="lists.html"></a></div>
+        <div class="textalign">Home</div>
+      </div>
+
+
+      <div class="wrapper" >
+          <div class="signout" ><a class="fas fa-sign-out-alt" id="icon2" href="index.html"></a></div>
+          <div class="textalign">Log Out</div>
+      </div>
     </div>
 
+
     <div>
-      <h1>First, let's put in your location :)</h1>
+      <h1>Put in your location :)</h1>
       <div class="searchcontainer"></div>
         <div class="input-group md-form form-sm form-2 pl-0">
           <input class="form-control my-0 py-1 red-border" type="text" placeholder="Enter your zipcode... ex: 92122" aria-label="Search" id="myInput" title="Type in a name" onkeyup="myFunction()">
@@ -58,16 +66,16 @@
 
     <footer id="footer">
       <!-- Arrow back -->
-      <a href="lists.html">
+      <a href="email.html">
         <button type="button" class="btn btn-outline-secondary" id="back">
             <i class="fas fa-arrow-left"></i>
-            Back
+           Summary
         </button>
       </a>
       <a href="#" onclick="saveStore(this)" id="myNext">
         <button type="button" class="btn btn-outline-secondary" id="next">
+            Find My Items!
             <i class="fas fa-arrow-right"></i>
-            Next
         </button>
       </a>
     </footer>

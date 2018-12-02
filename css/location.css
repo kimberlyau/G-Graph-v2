@@ -26,6 +26,10 @@ li {
   font-size: 175%;
 }
 
+.navibar .wrapper .fas {
+  color: #449afe;
+}
+
 #icon:hover {
   color: blue;
   transform: scale(1.1);
@@ -40,6 +44,9 @@ li {
   /* margin-top: 25%; */
   vertical-align: bottom;
   margin-top: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: 10px;
 }
 
 /* W3 School */
@@ -63,4 +70,18 @@ li {
 
 #myUL li a:hover:not(.header) {
   background-color: #eee;
+}
+
+.textalign {
+  color: black;
+  text-align: center;
+    font-size: 12px;
+}
+
+.wrapper {
+display: inline-block;
+}
+
+.signout {
+  float:center;
 }

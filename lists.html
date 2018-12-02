@@ -16,7 +16,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   <link rel="stylesheet" type="text/css" href="css/lists.css">
-    <script type="text/javascript" src="js/lists.js"></script>
+  <script type="text/javascript" src="js/lists.js"></script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -27,18 +27,25 @@
 <body>
   <!-- Navbar -->
   <div class="navibar">
-    <a class="fas fa-home" id="icon" href="lists.html"></a>
-    <a class="fas fa-sign-out-alt" id="icon2" href="index.html"></a>
+      <div class="wrapper" style="float:left;">
+      </div>
+
+
+    <div class="wrapper" >
+        <div class="signout" ><a class="fas fa-sign-out-alt" id="icon2" href="index.html"></a></div>
+        <div class="textalign">Log Out</div>
+    </div>
   </div>
 
   <div className="Lists">
     <h1> What would you like to do today? </h1>
     <br>
 
-    <h2>Let's go shopping!</h2>
     <h4>Make my own List!</h4>
-    <a href="location.html" class="row text-center" onclick="erase()">
-      <button type="button" class="btn btn-outline-secondary" > <!--onclick=accordionIngredients() > -->
+    <a href="ingredients.html" class="row text-center" onclick="erase()">
+      <button type="button" class="btn btn-outline-secondary">
+        <!--onclick=accordionIngredients() > -->
+
         <i class="fas fa-shopping-cart" onclick="goShopping()"></i>
       </button>
     </a>
@@ -47,32 +54,32 @@
   <br>
 
   <h4>Find a Recipe!</h4>
-  <a href="location.html" class="row text-center" onclick="erase()">
-    <button type="button" class="btn btn-outline-secondary" >
-        <i class="fas fa-utensils" onclick="getRecipe()"></i>
+  <a href="recipe.html" class="row text-center" onclick="erase()">
+    <button type="button" class="btn btn-outline-secondary">
+      <i class="fas fa-utensils" onclick="getRecipe()"></i>
     </button>
   </a>
 
   <hr>
 
-  <h3> View my saved Lists/Recipes!</h2>
-  <a href="savedlists.html" class="row text-center">
-    <button type="button" class="btn btn-outline-secondary">
+  <h4> View my saved Lists/Recipes!</h4>
+    <a href="savedlists.html" class="row text-center">
+      <button type="button" class="btn btn-outline-secondary">
         <i class="fas fa-list-ul"></i>
-    </button>
-  </a>
+      </button>
+    </a>
 
 
-  <script>
-      function erase(){
-          console.log("here");
-          localStorage.setItem("myList", JSON.stringify([]));
-          localStorage.setItem("selectedStore", "");
-          localStorage.setItem("listName", "");
-          localStorage.setItem("fromList", "");
+    <script>
+      function erase() {
+        console.log("here");
+        localStorage.setItem("myList", JSON.stringify([]));
+        localStorage.setItem("selectedStore", "");
+        localStorage.setItem("listName", "");
+        localStorage.setItem("fromList", "");
       }
 
-  </script>
+    </script>
 
 
 </body>

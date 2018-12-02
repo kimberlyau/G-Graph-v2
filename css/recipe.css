@@ -26,6 +26,14 @@ h5 {
   font-size: 175%;
 }
 
+.row{
+  justify-content: center;
+}
+
+.navibar .wrapper .fas {
+  color: #449afe;
+}
+
 #icon:hover {
   color: blue;
   transform: scale(1.1);
@@ -39,14 +47,18 @@ h5 {
 #back {
   /* margin-top: 25%; */
   vertical-align: bottom;
+  margin-top: 10px;
+  margin-left: 5px;
+  margin-right: 2.5px;
 }
 
 #myBtnContainer {
   margin-bottom: 10px;
 }
 
-#back {
-  margin-top: 10px;
+#next {
+  padding-left: 17.5px;
+  padding-right: 17.5px;
 }
 
 /* Scrolly */
@@ -106,4 +118,18 @@ li {
 
 .dropdownMenuButton {
   right: 0; left: auto;
+}
+
+.textalign {
+  color: black;
+  text-align: center;
+    font-size: 12px;
+}
+
+.wrapper {
+display: inline-block;
+}
+
+.signout {
+  float:center;
 }

@@ -14,6 +14,15 @@ li {
   margin-bottom: 2.5px;
 }
 
+.navibar .wrapper .fas {
+  color: #449afe;
+}
+
+.navibar .wrapper .fas : hover {
+  color: #6bb1ff;
+}
+
+
 .searchcontainer {
   padding-left: 15%;
   padding-right: 15%;
@@ -72,4 +81,18 @@ li {
 .row{
 display: flex;
 justify-content: center;
+}
+
+.textalign {
+  color: black;
+  text-align: center;
+    font-size: 12px;
+}
+
+.wrapper {
+display: inline-block;
+}
+
+.signout {
+  float:center;
 }

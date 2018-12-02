@@ -28,23 +28,33 @@
 <body>
   <!-- Navbar -->
   <div class="navibar">
+<<<<<<< HEAD
+    <div class="wrapper" style="float:left;">
+      <div style="float:left;"><a class="fas fa-home" id="icon" href="lists.html"></a></div>
+      <div class="textalign">Home</div>
+    </div>
+
+
+    <div class="wrapper">
+      <div class="signout"><a class="fas fa-sign-out-alt" id="icon2" href="index.html"></a></div>
+      <div class="textalign">Log Out</div>
+=======
       <div class="wrapper" style="float:left;">
         <div style="float:left;"><a class="fas fa-home" id="icon" href="lists.html"></a></div>
         <div class="textalign">Home</div>
       </div>
-
-
+  
+  
       <div class="wrapper" >
           <div class="signout" ><a class="fas fa-sign-out-alt" id="icon2" href="index.html"></a></div>
-          <div class="textalign">Log Out</div>
+          <div class="textalign">Log Out</div> 
       </div>
+>>>>>>> a56ddd3b0b3a6b9ecf4fd64beda2e1bd041cdc48
     </div>
   </div>
 
   <div>
-
-    <!-- Header -->
-    <h2 id="completeName">What would you like to do with this</h2>
+    <h2 id="completeName">Would you like to save this</h2>
 
     <!-- <h4 align="center">Would you like to save the list?</h4> -->
 
@@ -53,44 +63,42 @@
     <br>
 
     <div class="row">
-    <a class="row text-center" id="recipeOnly">
-      <button type="button" id="saveAs" class="btn btn-outline-secondary">
-        <!-- <i class="fa fa-times-circle fa-10x"></i> -->
-        Save Only!
+<<<<<<< HEAD
+      <a href="lists.html" class="row text-center">
+        <button type="button" class="btn btn-outline-secondary">
+          <i class="fa fa-times-circle fa-10x"></i>
+        </button>
+      </a>
+
+      <!--Space for buttons-->
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+=======
+    <a href="lists.html" class="row text-center">
+      <button type="button" class="btn btn-outline-secondary">
+        <i class="fa fa-times-circle fa-10x"></i>
       </button>
     </a>
-
+    
     <!--Space for buttons-->
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+>>>>>>> parent of a56ddd3... Major Flow changes
 
-      <a class="row text-center" id="recipeOnly2">
-        <button type="button" id="saveAs2" class="btn btn-outline-secondary">
-          Save and Shop!
-          <!-- <i class="fa fa-check-circle fa-10x"></i> -->
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+      <a class="row text-center" id="recipeOnly">
+        <button type="button" id="saveAs" class="btn btn-outline-secondary">
+
+          <i class="fa fa-check-circle fa-10x"></i>
         </button>
       </a>
     </div>
 
 
-    <a href="#" id="backBtn" onclick="toggle()">
-      <button type="button" class="btn btn-outline-secondary" id="Baack">
+    <a href="storemap.html">
+      <button type="button" class="btn btn-outline-secondary">
         Back
       </button>
     </a>
-
-    <br>
-    <script>
-      function toggle() {
-        if (localStorage.getItem('nextToggle') == "shopping") {
-          document.getElementById("backBtn").href = "ingredients.html";
-        }
-
-        else if (localStorage.getItem('nextToggle') == "recipe") {
-          document.getElementById("backBtn").href = "recipe.html";
-        }
-      }
-
-    </script>
 
 
     <!-- The Modal -->
@@ -115,35 +123,13 @@
         </div>
         <div class="modal-body">
           <h5 class='col-12 modal-title text-center'>Name your List:</h5>
-          <!-- Modal buttons -->
           <input type="text" class="form-control" id="listName">
-          <!--
-          <a href="location.html" class="text-center" onclick="saveList()">
-            <button type="button" class="btn btn-outline-secondary" id="saveButton">
-              Save and Shop!
-            </button>
-          </a>
-          <h5 class='col-12 modal-title text-center'>or</h5>
-        -->
           <a href="done.html" class="text-center" onclick="saveList()">
-            <button type="button" class="btn btn-outline-secondary" id="saveQuit">
-              Save and Finish :)
+            <button type="button" class="btn btn-outline-secondary" style="float:right" id="saveButton">
+              Save
             </button>
           </a>
         </div>
-
-        <div class="modal-body">
-          <h5 class='col-12 modal-title text-center'>Name your List:</h5>
-          <!-- Modal buttons -->
-          <input type="text" class="form-control" id="listName2">
-
-          <a href="location.html" class="text-center" onclick="saveList()">
-            <button type="button" class="btn btn-outline-secondary" id="saveQuit2">
-              Save and shop :)
-            </button>
-          </a>
-        </div>
-        <!--
       <div class="modal-body">
        <h5>Name your List:</h5>
        <input type="text" class="form-control" id="listName">
@@ -153,7 +139,7 @@
           </button>
         </a>
       </div>
-    -->
+
       </div>
     </div>
 

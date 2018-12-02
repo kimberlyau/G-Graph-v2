@@ -31,6 +31,48 @@ h1 {
   font-size: 175%;
 }
 
+.navibar .wrapper .fas {
+  color: #449afe;
+}
+
+/* Edit */
+ .btn-primary {
+  background-color:	#539bef;
+  border-color: #539bef;
+}
+
+/* Cart */
+.btn-success {
+  background-color:	#a28ad2;
+  border-color:	#a28ad2;
+  margin-left: 5px;
+}
+
+/* Delete */
+.btn-danger {
+  background-color: #ff5a5a;
+  border-color: #ff5a5a;
+}
+
+#back {
+  margin-top: 10px;
+}
+
+#accordion {
+  margin-top: 20px;
+}
+
+#recipeTab {
+  padding-left: 27px;
+  padding-right: 27px;
+
+}
+.card-head {
+  background-color: #7aaede;
+  color:white;
+}
+
+
 #icon:hover, #icon2:hover {
   color: blue;
   transform: scale(1.1);
@@ -79,4 +121,18 @@ li {
   background-color: white;
   display: none;
   overflow: hidden;
+}
+
+.textalign {
+  color: black;
+  text-align: center;
+    font-size: 12px;
+}
+
+.wrapper {
+display: inline-block;
+}
+
+.signout {
+  float:center;
 }

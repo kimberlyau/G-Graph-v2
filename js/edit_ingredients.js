@@ -49,11 +49,6 @@ function putInInput(elem){
 }
 
 function updateResults(elem){
-  if(myList.length > 6){
-    alert("Sorry only 7 items are allowed right now. Premium features are only availble in Beta");
-    return;
-  }
-
   var search;
   if(elem.tagName === "BUTTON"){
     search = document.getElementById("search").value;
@@ -95,8 +90,9 @@ function displayIngredients(){
 }
 function deleteItem(elem){
   var getItem = $(elem).attr('id');
-  myList.splice(getItem, 1);
-  show[getItem]=false;
+  var index = myList.indexOf(getItem);
+  myList.splice(index, 1);
+  show[index]=false;
   displayIngredients();
 }
 

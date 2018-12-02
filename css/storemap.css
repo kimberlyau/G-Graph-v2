@@ -4,17 +4,38 @@ body {
   font-family: 'Comfortaa';
 }
 
+h2 {
+  text-align: center;
+}
+
 label {
   padding-bottom: -10px;
 }
 
 h5 {
   padding-top: 10px;
-}
-
-h5, #list {
   margin-left: 10%;
   margin-right: 10%;
+}
+
+#list {
+  margin-left: 3%;
+  margin-right: 3%;
+  padding-left: 5%;
+}
+
+#chgStore {
+  margin-left: 15px;
+}
+
+#finish {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+
+input {
+  padding-top: 5px;
 }
 
 .navibar {
@@ -23,8 +44,12 @@ h5, #list {
   font-size: 175%;
 }
 
+.navibar .wrapper .fas {
+  color: #449afe;
+}
+
 .anyClass {
-  height: 150px;
+  height: 200px;
   overflow-y: scroll;
   background-color: #F8F8F8;
 }
@@ -84,4 +109,26 @@ h5, #list {
 
 #item8 {
   padding-left: 175px;
+}
+
+.textalign {
+  color: black;
+  text-align: center;
+    font-size: 12px;
+}
+
+.wrapper {
+display: inline-block;
+}
+
+.signout {
+  float:center;
+}
+
+#editIngredients {
+  background-color: #ecd0ff;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 12px;
+
 }

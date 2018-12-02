@@ -42,19 +42,17 @@ function showSaved(bool) {
                 +        '<i class="fas fa-minus"></i>'
                 +      '</button>';
 
-                body = 'Store: ' + savedLists[i][1];
                 +    '<ul>';
                 for(var j = 0; j<savedLists[i][2].length; j++){
                     body+='<li>' + savedLists[i][2][j] + '</li>';
                 }
                 body +=
                         '</ul>'
-                +        '<a href="storemap.html" class="right" onclick="shopList(this)" id="shop' + i + '"><button type="button" class="btn btn-success">'
+                +        '<a href="location.html" class="right" onclick="shopList(this)" id="shop' + i + '"><button type="button" class="btn btn-success">'
                 +        '<i class="fas fa-shopping-cart"></i>'
-                +      '</button></a>'
-
-                + '<a href="location.html" class="right" onclick="shopList(this)" id="shop' + i + '"><button type="button" class="btn btn-primary">'
-                +        '<i class="fas fa-edit"></i>'
+                +      '</button></a> '
+                + '<a href="ingredients.html" class="right" onclick="shopList(this)" id="edit' + i + '"><button type="button" class="btn btn-primary">'
+                +        '<i class="fas fa-pen"></i>'
                 +      '</button></a>';
             }
             else{
@@ -67,7 +65,7 @@ function showSaved(bool) {
                     body+='<li>' + savedLists[i][1][j] + '</li>';
                 }
                 body +='</ul>';
-                
+
                 body += 'Steps: ' + '<ol>';
                 for(var j = 0; j<savedLists[i][2].length; j++){
                     body+='<li>' + savedLists[i][2][j] + '</li>';
@@ -84,14 +82,12 @@ function showSaved(bool) {
 
             add +=
             '<div class="card template">'
-            + '<div class="card-header" id="headingOne">'
+            + '<div class="card-header card-head" id="headingOne" data-toggle="collapse" data-target="#collapse'
+            + i + '" aria-expanded="true" aria-controls="collapseOne">'
             + '<h5 class="mb-0">'
-            +   '<button class="btn btn-link" data-toggle="collapse" data-target="#collapse'
-            + i + '" aria-expanded="true"'
-            +      'aria-controls="collapseOne">'
+
             +      savedLists[i][0]
 
-            +    '</button>'
             +    container
             +  '</h5>'
             +'</div>'

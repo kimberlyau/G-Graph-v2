@@ -14,6 +14,10 @@ body {
     list-style-type: circle;
  }
 
+ button {
+   text-decoration: none;
+ }
+
   .searchcontainer {
     padding-left: 15%;
     padding-right: 15%;
@@ -31,11 +35,14 @@ body {
     background-color: #F8F8F8;
     margin-left: 10%;
     margin-right: 10%;
-    padding-left: 12.5%;
-    padding-top: 2.5%;
+    padding-left: 5%;
+    /* padding-top: px; */
     padding-bottom: 2.5%;
-    margin-top: 2%;
     margin-bottom: 2;
+  }
+
+  .navibar .wrapper .fas {
+    color: #449afe;
   }
 
   #icon:hover {
@@ -144,4 +151,61 @@ body {
   padding: 20px;
   border: 1px solid #888;
   width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.textalign {
+  color: black;
+  text-align: center;
+    font-size: 12px;
+}
+
+.wrapper {
+display: inline-block;
+}
+
+.signout {
+  float:center;
+}
+
+#overwrite {
+  background-color: #ecd0ff;
+  margin-top: 5px;
+  margin-bottom: 3px;
+}
+
+#newList {
+  width:200px;
+  margin-top: 5px;
+}
+
+#saveButton {
+  min-width: 170px;
+  margin: 0 auto;
+  display: block;
+  margin-top: 6px;
+}
+
+#saveQuit, #saveQuit2 {
+  background-color: #ecd0ff;
+  margin: 0 auto;
+  display: block;
+  margin-top: 10px;
+}
+
+#saveAs2 {
+  background-color: #ecd0ff;
+}
+
+#Baack {
+  margin-top: 10px;
+}
+
+#underline {
+  padding-top: 15px;
+  margin-bottom: -10px;
+}
+
+hr {
+  margin-bottom: -10px;
+  margin-right: 15px;
 }
