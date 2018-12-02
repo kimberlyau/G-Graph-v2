@@ -113,21 +113,6 @@
       </button>
     </a>
 
-    <script>
-      $(document).ready(function () {
-        $('[data-toggle="tooltip"]').tooltip();
-      });
-
-      // Toggle back button
-      document.getElementById("back").onclick = function () {
-        if (localStorage.getItem('nextToggle') == 'recipe') {
-          document.getElementById("back").href = "recipe.html";
-        } else {
-          document.getElementById("nextH").href = "ingredients.html";
-        }
-      };
-    </script>
-
   </div>
 
 </body>
