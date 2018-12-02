@@ -5,7 +5,7 @@ let ingredients = ["bacon", "chicken", "eggs", "milk", "apples", "broccoli", "le
 "chips", "chocolate", "clams", "coffee", "garlic", "ginger", "ham", "cheeseburgers", "honey", "ice cream",
 "kale", "kabobs", "ketchup", "kiwi", "lobster", "lamb", "pizza", "spinach", "spaghetti", "waffles",
 "wine", "walnuts", "yogurt", "zucchini", "butter", "lemon", "beef", "potato", "onion", "steak", "sausage",
-"flour", "salt", "pepper"
+"flour", "salt", "pepper", "pumpkin", "hotdog"
 ];
 let show = [];
 let myList = [];
