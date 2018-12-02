@@ -42,14 +42,13 @@ function showSaved(bool) {
                 +        '<i class="fas fa-minus"></i>'
                 +      '</button>';
 
-                body = 'Store: ' + savedLists[i][1];
                 +    '<ul>';
                 for(var j = 0; j<savedLists[i][2].length; j++){
                     body+='<li>' + savedLists[i][2][j] + '</li>';
                 }
                 body +=
                         '</ul>'
-                +        '<a href="storemap.html" class="right" onclick="shopList(this)" id="shop' + i + '"><button type="button" class="btn btn-success">'
+                +        '<a href="location.html" class="right" onclick="shopList(this)" id="shop' + i + '"><button type="button" class="btn btn-success">'
                 +        '<i class="fas fa-shopping-cart"></i>'
                 +      '</button></a>'
 
