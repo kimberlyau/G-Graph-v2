@@ -1,13 +1,15 @@
-let ingredients = ["bacon", "chicken", "eggs", "milk", "apples", "broccoli", "lettuce", "tomato", "Green Chili",
-"Refried Beans", "Salsa", "Rice", "Tacos", "Corn", "Tortillias", "Baking Powder", "Baking Soda", "Brown Sugar",
-"Brownie Mix", "Cake Mix", "Cereal", "Baby Food", "Juice", "almond", "arugala", "artichoke", "Bruscetta", "black beans", 
-"bagels", "baked beans", "beer", "fish", "bread", "Cabbage", "cake", "carrots", "celery", "cheese", "chicken", 
+let ingredients = ["bacon", "chicken", "eggs", "milk", "apples", "broccoli", "lettuce", "tomato", "green chili",
+"refried beans", "salsa", "rice", "tacos", "corn", "tortillias", "baking powder", "baking soda", "sugar",
+"brownie mix", "cake mix", "cereal", "baby food", "juice", "almond", "arugala", "artichoke", "bruscetta", "black beans", 
+"bagels", "baked beans", "beer", "fish", "bread", "cabbage", "cake", "carrots", "celery", "cheese", "chicken", 
 "chips", "chocolate", "clams", "coffee", "Garlic", "ginger", "ham", "cheeseburgers", "honey", "ice cream",
-"kale", "kabobs", "ketchup", "kiwi", "lobster", "Lamb", "Pizza", "Spinach", "Spaghetti", "Waffles",
-"Wine", "Walnuts", "Yogurt", "Zucchini"
+"kale", "kabobs", "ketchup", "kiwi", "lobster", "Lamb", "Pizza", "spinach", "spaghetti", "waffles",
+"wine", "walnuts", "yogurt", "zucchini", "butter", "lemon", "beef", "potato", "onion", "steak", "sausage"
 ];
 let show = [];
 let myList = [];
+
+ingredients.sort();
 
 for(var i = 0; i<ingredients.length; i++){
   show.push(false);
