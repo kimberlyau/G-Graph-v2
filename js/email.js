@@ -87,12 +87,12 @@ function initModal(){    //Taken from w3schools
     }
 
     newList.onclick = function() {
-        switchView(2, modal1, modal2, modal3);
+        switchView(justSave, modal1, modal2, modal3);
     }
 
     overwrite.onclick = function() {
         overwriteTo = parseInt(localStorage.getItem("fromList"));
-        switchView(2, modal1, modal2, modal3);
+        switchView(justSave, modal1, modal2, modal3);
     }
 
     // When the user clicks on <span> (x), close the modal
