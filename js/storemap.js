@@ -16,14 +16,14 @@ function togglePin (elmnt, index) {
       function init(){
         // the code to be called when the dom has loaded
         // #document has its nodes
-        var redirect = document.getElementById("redirect");
-        if(localStorage.getItem('nextToggle') == "recipe"
-          && localStorage.getItem("fromList") != ""){
-          redirect.href = "lists.html";
-        }
-        else{
-          redirect.href = "email.html";
-        }
+        // var redirect = document.getElementById("redirect");
+        // if(localStorage.getItem('nextToggle') == "recipe"
+        //   && localStorage.getItem("fromList") != ""){
+        //   redirect.href = "lists.html";
+        // }
+        // else{
+        //   redirect.href = "email.html";
+        // }
 
         let ingredients = JSON.parse(localStorage.getItem('myList'));
 
