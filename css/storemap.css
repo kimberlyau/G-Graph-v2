@@ -110,3 +110,11 @@ display: inline-block;
 .signout {
   float:center;
 }
+
+#editIngredients {
+  background-color: #ecd0ff;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 12px;
+
+}
