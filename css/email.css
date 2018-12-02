@@ -171,6 +171,19 @@ display: inline-block;
 }
 
 #saveButton {
+  min-width: 170px;
+  margin: 0 auto;
+  display: block;
+  margin-top: 6px;
+}
+
+#saveQuit {
   background-color: #aaebf9;
-  margin-top: 5px;
+  margin: 0 auto;
+  display: block;
+  margin-top: 2px;
+}
+
+#shopButton {
+  background-color: #aaebf9;
 }
