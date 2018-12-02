@@ -89,10 +89,15 @@ function displayIngredients(){
   }
 }
 function deleteItem(elem){
+  console.log("HEREEE");
   var getItem = $(elem).attr('id');
   var index = myList.indexOf(getItem);
-  myList.splice(index, 1);
-  show[index]=false;
+  console.log(myList);
+  console.log(getItem);
+  console.log(index)
+
+  myList.splice(getItem, 1);
+  show[getItem]=false;
   displayIngredients();
 }
 
