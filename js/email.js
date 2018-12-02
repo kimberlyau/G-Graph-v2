@@ -1,15 +1,23 @@
 var overwriteTo;
 
-function switchView(bool, tag1, tag2){
+var justSave = 2;
+function switchView(num, tag1, tag2, tag3){
     //if true, first tag gets displayed
     console.log(tag2);
-    if(bool){
+    if(num === 1){ //true
         tag1.style.display = "block";
         tag2.style.display = "none";
+        tag3.style.display = "none"
+    }
+    else if (num === 2){
+        tag1.style.display = "none";
+        tag2.style.display = "block";
+        tag3.style.display = "none"
     }
     else{
         tag1.style.display = "none";
-        tag2.style.display = "block";
+        tag2.style.display = "none";
+        tag3.style.display = "block"
     }
 }
 
@@ -19,6 +27,8 @@ function initModal(){    //Taken from w3schools
 
     // Get the button that opens the modal
     var saveAs = document.getElementById("saveAs");
+    var saveAs2 = document.getElementById("saveAs2");
+
 
     // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("close")[0];
@@ -30,12 +40,14 @@ function initModal(){    //Taken from w3schools
     //Get div that contains naming the list
     var newList = document.getElementById("newList");
     var modal2 = document.getElementsByClassName("modal-body")[1];
+    var modal3 = document.getElementsByClassName("modal-body")[2];
 
 
 
 
     // When the user clicks on the button, open the modal
     saveAs.onclick = function() {
+        justSave = 2;
         if(localStorage.getItem('nextToggle') == 'recipe'){
             saveRecipe();
             document.getElementById("recipeOnly").href = "done.html";
@@ -45,22 +57,42 @@ function initModal(){    //Taken from w3schools
 
             //depends on whether you are shopping from a saved list or not
             if(localStorage.getItem("fromList") === ""){
-                switchView(false, modal1, modal2);
+                switchView(2, modal1, modal2, modal3);
                 overwrite = -1;
             }
             else{
-                switchView(true, modal1, modal2);
+                switchView(1, modal1, modal2, modal3);
+            }
+        }
+    }
+
+    saveAs2.onclick = function() {
+        justSave = 3;
+        if(localStorage.getItem('nextToggle') == 'recipe'){
+            saveRecipe();
+            document.getElementById("recipeOnly").href = "done.html";
+        }
+        else {
+            modal.style.display = "block";
+
+            //depends on whether you are shopping from a saved list or not
+            if(localStorage.getItem("fromList") === ""){
+                switchView(3, modal1, modal2, modal3);
+                overwrite = -1;
+            }
+            else{
+                switchView(1, modal1, modal2, modal3);
             }
         }
     }
 
     newList.onclick = function() {
-        switchView(false, modal1, modal2);
+        switchView(2, modal1, modal2, modal3);
     }
 
     overwrite.onclick = function() {
         overwriteTo = parseInt(localStorage.getItem("fromList"));
-        switchView(false, modal1, modal2);
+        switchView(2, modal1, modal2, modal3);
     }
 
     // When the user clicks on <span> (x), close the modal
