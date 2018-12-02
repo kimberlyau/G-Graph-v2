@@ -107,3 +107,17 @@ li {
 .dropdownMenuButton {
   right: 0; left: auto;
 }
+
+.textalign {
+  color: black;
+  text-align: center;
+    font-size: 12px;
+}
+
+.wrapper {
+display: inline-block;
+}
+
+.signout {
+  float:center;
+}

@@ -28,11 +28,20 @@
 <body>
   <div className="SavedLists">
 
-    <!-- Navbar -->
-    <div class="navibar">
-      <a class="fas fa-home" id="icon" href="lists.html"></a>
-      <a class="fas fa-sign-out-alt" id="icon2" href="index.html"></a>
+   <!-- Navbar -->
+   <div class="navibar">
+      <div class="wrapper" style="float:left;">
+        <div style="float:left;"><a class="fas fa-home" id="icon" href="lists.html"></a></div>
+        <div class="textalign">Home</div>
+      </div>
+  
+  
+      <div class="wrapper" >
+          <div class="signout" ><a class="fas fa-sign-out-alt" id="icon2" href="index.html"></a></div>
+          <div class="textalign">Log Out</div> 
+      </div>
     </div>
+  
 
     <div class="btn-group btn-group-toggle" data-toggle="buttons">
         <label class="btn btn-secondary active btn-outline-secondary" onclick="showSaved(true)">

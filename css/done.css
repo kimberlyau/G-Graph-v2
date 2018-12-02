@@ -73,3 +73,17 @@ li {
 display: flex;
 justify-content: center;
 }
+
+.textalign {
+  color: black;
+  text-align: center;
+    font-size: 12px;
+}
+
+.wrapper {
+display: inline-block;
+}
+
+.signout {
+  float:center;
+}

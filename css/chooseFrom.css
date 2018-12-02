@@ -6,3 +6,17 @@ button {
   margin: auto 25%;
   text-align: center;
 }
+
+.textalign {
+  color: black;
+  text-align: center;
+    font-size: 12px;
+}
+
+.wrapper {
+display: inline-block;
+}
+
+.signout {
+  float:center;
+}

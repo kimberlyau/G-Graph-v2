@@ -145,3 +145,17 @@ body {
   border: 1px solid #888;
   width: 80%; /* Could be more or less, depending on screen size */
 }
+
+.textalign {
+  color: black;
+  text-align: center;
+    font-size: 12px;
+}
+
+.wrapper {
+display: inline-block;
+}
+
+.signout {
+  float:center;
+}

@@ -64,3 +64,17 @@ li {
 #myUL li a:hover:not(.header) {
   background-color: #eee;
 }
+
+.textalign {
+  color: black;
+  text-align: center;
+    font-size: 12px;
+}
+
+.wrapper {
+display: inline-block;
+}
+
+.signout {
+  float:center;
+}
