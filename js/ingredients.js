@@ -49,6 +49,11 @@ function putInInput(elem){
 }
 
 function updateResults(elem){
+  if(myList.length > 6){
+    alert("Sorry only 7 items are allowed right now. Premium features are only availble in Beta");
+    return;
+  }
+
   var search;
   if(elem.tagName === "BUTTON"){
     search = document.getElementById("search").value;
