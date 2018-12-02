@@ -42,11 +42,7 @@
   </div>
 
   <div>
-<<<<<<< HEAD
-    <h2 id="completeName">What would you like do with this</h2>
-=======
     <h2 id="completeName">What would you like do with this </h2>
->>>>>>> ed10f96404443fccd01451cc76c9461eca264d97
 
     <!-- <h4 align="center">Would you like to save the list?</h4> -->
 
@@ -65,8 +61,8 @@
 
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-      <a href="location.html" class="row text-center">
-        <button type="button" class="btn btn-outline-secondary" id="shopButton">
+      <a class="row text-center">
+        <button type="button" id="saveAs2" class="btn btn-outline-secondary" id="shopButton">
           Save and Shop!
         </button>
       </a>
@@ -117,6 +113,17 @@
           <a href="done.html" class="text-center" onclick="saveList()">
             <button type="button" class="btn btn-outline-secondary" id="saveQuit">
               Save and Finish :)
+            </button>
+          </a>
+        </div>
+        <div class="modal-body">
+          <h5 class='col-12 modal-title text-center'>Name your List:</h5>
+          <!-- Modal buttons -->
+          <input type="text" class="form-control" id="listName">
+          
+          <a href="location.html" class="text-center" onclick="saveList()">
+            <button type="button" class="btn btn-outline-secondary" id="saveQuit">
+              Save and shop :)
             </button>
           </a>
         </div>
