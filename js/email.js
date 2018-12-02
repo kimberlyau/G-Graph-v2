@@ -144,7 +144,7 @@ function displaySummary(){
 
 
     var summary = document.getElementById("summary");
-    var selectedStore = localStorage.getItem("selectedStore");
+    // var selectedStore = localStorage.getItem("selectedStore");
     var myList = JSON.parse(localStorage.getItem("myList"));
     var isRecipe = localStorage.getItem('nextToggle') == 'recipe';
     var add = "";
@@ -153,9 +153,9 @@ function displaySummary(){
     }
     add +='<div>'
         +  '<div class="panel-body" id="testing">'
-    if(!isRecipe){
-     add +=   '<b>Store:</b> ' + selectedStore
-    }
+    // if(!isRecipe){
+    //  add +=   '<b>Store:</b> ' + selectedStore
+    // }
     add +=    '<div><br><b>List:</b><ul>';
         for(var j =0; j<myList.length; j++){
             add += '<li>' + myList[j] + '</li>';
