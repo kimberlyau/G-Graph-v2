@@ -89,3 +89,17 @@ h5, #list {
 #item8 {
   padding-left: 175px;
 }
+
+.textalign {
+  color: black;
+  text-align: center;
+    font-size: 12px;
+}
+
+.wrapper {
+display: inline-block;
+}
+
+.signout {
+  float:center;
+}
