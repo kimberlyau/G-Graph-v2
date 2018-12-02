@@ -1,4 +1,11 @@
-let ingredients = ["bacon", "chicken", "eggs", "milk", "apples", "broccoli", "lettuce", "tomato"];
+let ingredients = ["bacon", "chicken", "eggs", "milk", "apples", "broccoli", "lettuce", "tomato", "Green Chili",
+"Refried Beans", "Salsa", "Rice", "Tacos", "Corn", "Tortillias", "Baking Powder", "Baking Soda", "Brown Sugar",
+"Brownie Mix", "Cake Mix", "Cereal", "Baby Food", "Juice", "almond", "arugala", "artichoke", "Bruscetta", "black beans", 
+"bagels", "baked beans", "beer", "fish", "bread", "Cabbage", "cake", "carrots", "celery", "cheese", "chicken", 
+"chips", "chocolate", "clams", "coffee", "Garlic", "ginger", "ham", "cheeseburgers", "honey", "ice cream",
+"kale", "kabobs", "ketchup", "kiwi", "lobster", "Lamb", "Pizza", "Spinach", "Spaghetti", "Waffles",
+"Wine", "Walnuts", "Yogurt", "Zucchini"
+];
 let show = [];
 let myList = [];
 
