@@ -17,7 +17,7 @@ function togglePin (elmnt, index) {
         // the code to be called when the dom has loaded
         // #document has its nodes
         var redirect = document.getElementById("redirect");
-        if(localStorage.getItem('nextToggle') == "recipe" 
+        if(localStorage.getItem('nextToggle') == "recipe"
           && localStorage.getItem("fromList") != ""){
           redirect.href = "lists.html";
         }
@@ -29,15 +29,10 @@ function togglePin (elmnt, index) {
 
         var list = document.getElementById("list");
         for(var i = 0; i<ingredients.length; i++){
-            var addToList = '<div>'
-            + '<div class="form-check">'
+            var addToList = '<div class="form-check">'
             + `<input type="checkbox" class="form-check-input" id="materialUnchecked" onchange="togglePin(this, ${i + 1})">`
-            + '<label class="form-check-label" for="materialUnchecked">'
             + ingredients[i]
-            + '</label>'
             + '</div>'
-            + '<button type="button" class="btn btn-light" disabled>'
-            + '</div>';
             list.innerHTML += addToList;
         }
 
