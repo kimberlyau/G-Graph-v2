@@ -49,11 +49,11 @@ function showSaved(bool) {
                 }
                 body +=
                         '</ul>'
-                +        '<a href="ingredients.html" class="right" onclick="shopList(this)" id="shop' + i + '"><button type="button" class="btn btn-success">'
+                +        '<a href="storemap.html" class="right" onclick="shopList(this)" id="shop' + i + '"><button type="button" class="btn btn-success">'
                 +        '<i class="fas fa-shopping-cart"></i>'
                 +      '</button></a>'
 
-                + '<a href="location.html" class="right" onclick="shopList(this)" id="shop' + i + '"><button type="button" class="btn btn-primary">'
+                + '<a href="ingredients.html" class="right" onclick="shopList(this)" id="shop' + i + '"><button type="button" class="btn btn-primary">'
                 +        '<i class="fas fa-edit"></i>'
                 +      '</button></a>';
             }
