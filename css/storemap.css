@@ -34,6 +34,10 @@ input {
   font-size: 175%;
 }
 
+.navibar .wrapper .fas {
+  color: #6bb1ff;
+}
+
 .anyClass {
   height: 200px;
   overflow-y: scroll;

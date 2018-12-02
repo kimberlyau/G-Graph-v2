@@ -19,6 +19,10 @@ li {
   margin-bottom: 2.5px;
 }
 
+.navibar .wrapper .fas {
+  color: #6bb1ff;
+}
+
 .searchcontainer {
   padding-left: 15%;
   padding-right: 15%;

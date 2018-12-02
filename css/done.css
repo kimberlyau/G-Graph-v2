@@ -14,6 +14,15 @@ li {
   margin-bottom: 2.5px;
 }
 
+.navibar .wrapper .fas {
+  color: #6bb1ff;
+}
+
+.navibar .wrapper .fas : hover {
+  color: #79b8ff;
+}
+
+
 .searchcontainer {
   padding-left: 15%;
   padding-right: 15%;
