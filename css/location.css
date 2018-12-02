@@ -26,6 +26,10 @@ li {
   font-size: 175%;
 }
 
+.navibar .wrapper .fas {
+  color: #6bb1ff;
+}
+
 #icon:hover {
   color: blue;
   transform: scale(1.1);
