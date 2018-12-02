@@ -118,6 +118,17 @@ function initModal(){    //Taken from w3schools
     else{
         listName.value = currListName;
     }
+
+    // Get the input in modal
+    var currListName = localStorage.getItem("listName");
+    var listName = document.getElementById('listName2');
+    if(currListName === ""){
+        var lengthL = JSON.parse(localStorage.getItem("savedLists")).length
+        listName.value = "List " + (lengthL+1);
+    }
+    else{
+        listName.value = currListName;
+    }
 }
 
 
@@ -127,7 +138,13 @@ function initModal(){    //Taken from w3schools
 
 function saveList(){
     var myList = JSON.parse(localStorage.getItem("myList"));
-    var listName = document.getElementById('listName');
+    var listName;
+    if(justSave === 2){
+        listName = document.getElementById('listName');
+    }
+    else{
+        listName = document.getElementById('listName2');
+    }
 
     if(myList === []){
         alert("There is nothing on your list please add something to it");
