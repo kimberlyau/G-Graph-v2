@@ -3,7 +3,8 @@
 
 <head>
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
     crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
@@ -27,17 +28,17 @@
 <body>
   <!-- Navbar -->
   <div class="navibar">
-      <div class="wrapper" style="float:left;">
-        <div style="float:left;"><a class="fas fa-home" id="icon" href="lists.html"></a></div>
-        <div class="textalign">Home</div>
-      </div>
-  
-  
-      <div class="wrapper" >
-          <div class="signout" ><a class="fas fa-sign-out-alt" id="icon2" href="index.html"></a></div>
-          <div class="textalign">Log Out</div> 
-      </div>
+    <div class="wrapper" style="float:left;">
+      <div style="float:left;"><a class="fas fa-home" id="icon" href="lists.html"></a></div>
+      <div class="textalign">Home</div>
     </div>
+
+
+    <div class="wrapper">
+      <div class="signout"><a class="fas fa-sign-out-alt" id="icon2" href="index.html"></a></div>
+      <div class="textalign">Log Out</div>
+    </div>
+  </div>
 
   <div>
     <h2 id="completeName">Would you like to save this</h2>
@@ -49,64 +50,67 @@
     <br>
 
     <div class="row">
-    <a href="lists.html" class="row text-center">
+      <a href="lists.html" class="row text-center">
+        <button type="button" class="btn btn-outline-secondary">
+          <i class="fa fa-times-circle fa-10x"></i>
+        </button>
+      </a>
+
+      <!--Space for buttons-->
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+      <a class="row text-center" id="recipeOnly">
+        <button type="button" id="saveAs" class="btn btn-outline-secondary">
+
+          <i class="fa fa-check-circle fa-10x"></i>
+        </button>
+      </a>
+    </div>
+
+
+    <a href="storemap.html">
       <button type="button" class="btn btn-outline-secondary">
-        <i class="fa fa-times-circle fa-10x"></i>
+        Back
       </button>
     </a>
-    
-    <!--Space for buttons-->
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-    <a class="row text-center" id="recipeOnly">
-      <button type="button" id="saveAs" class="btn btn-outline-secondary">
-
-        <i class="fa fa-check-circle fa-10x"></i>
-      </button>
-    </a>
-  </div>
 
 
-  <a href="storemap.html">
-    <button type="button" class="btn btn-outline-secondary">
-      Back
-    </button>
-  </a>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
 
+      <!-- Modal content -->
+      <div class="modal-content">
 
-  <!-- The Modal -->
-  <div id="myModal" class="modal">
+        <div style="float:right;"><span class="close">&times;</span></div>
 
-    <!-- Modal content -->
-    <div class="modal-content">
-      <div class="modal-header">
-        <span class="close">&times;</span>
-      </div>
-      <div class="modal-body">
-          <h5>Do you want to:</h5>
+        <div class="modal-header">
+          <h5 class='col-12 modal-title text-center'>Do you want to:</h5>
+        </div>
+        <div class="modal-body" style="text-align:center;">
           <button type="button" id="overwrite" class="btn btn-outline-secondary">
-            Overwrite my List
+            Overwrite current list
           </button>
+          <h6 class='col-12 modal-title text-center'>or</h6>
           <button type="button" id="newList" class="btn btn-outline-secondary">
-            Save as new
+            Save as new list
           </button>
         </div>
-      <div class="modal-body">
-       <h5>Name your List:</h5>
-       <input type="text" class="form-control" id="listName">
-       <a href="done.html" class="text-center" onclick="saveList()">
-          <button type="button" class="btn btn-outline-secondary">
-            Save
-          </button>
-        </a>
+        <div class="modal-body">
+          <h5 class='col-12 modal-title text-center'>Name your List:</h5>
+          <input type="text" class="form-control" id="listName">
+          <a href="done.html" class="text-center" onclick="saveList()">
+            <button type="button" class="btn btn-outline-secondary" style="float:right" id="saveButton">
+              Save
+            </button>
+          </a>
+        </div>
+
       </div>
-
     </div>
-  </div>
 
-<!--  href="done.html"-->
+    <!--  href="done.html"-->
 
 
 </body>

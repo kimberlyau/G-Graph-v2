@@ -159,3 +159,19 @@ display: inline-block;
 .signout {
   float:center;
 }
+
+#overwrite {
+  background-color: #aaebf9;
+  margin-top: 5px;
+  margin-bottom: 3px;
+}
+
+#newList {
+  width:200px;
+  margin-top: 5px;
+}
+
+#saveButton {
+  background-color: #aaebf9;
+  margin-top: 5px;
+}
