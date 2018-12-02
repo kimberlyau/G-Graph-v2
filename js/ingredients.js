@@ -3,7 +3,7 @@ let ingredients = ["bacon", "chicken", "eggs", "milk", "apples", "broccoli", "le
 "brownie mix", "cake mix", "cereal", "baby food", "juice", "almond", "arugala", "artichoke", "bruscetta", "black beans", 
 "bagels", "baked beans", "beer", "fish", "bread", "cabbage", "cake", "carrots", "celery", "cheese", "chicken", 
 "chips", "chocolate", "clams", "coffee", "Garlic", "ginger", "ham", "cheeseburgers", "honey", "ice cream",
-"kale", "kabobs", "ketchup", "kiwi", "lobster", "Lamb", "Pizza", "spinach", "spaghetti", "waffles",
+"kale", "kabobs", "ketchup", "kiwi", "lobster", "lamb", "Pizza", "spinach", "spaghetti", "waffles",
 "wine", "walnuts", "yogurt", "zucchini", "butter", "lemon", "beef", "potato", "onion", "steak", "sausage"
 ];
 let show = [];
