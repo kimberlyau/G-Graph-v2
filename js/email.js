@@ -198,7 +198,7 @@ function displaySummary(){
     var isRecipe = localStorage.getItem('nextToggle') == 'recipe';
     var add = "";
     if(isRecipe){
-        add+= '<h3 id="underline">'+localStorage.getItem("recipeName")+'</h3>'
+        add+= '<h3 id="underline">'+localStorage.getItem("recipeName")+'</h3><hr>'
     }
     add +='<div>'
         +  '<div class="panel-body" id="testing">'
