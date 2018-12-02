@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
     crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
-  
+
   <link rel="stylesheet" type="text/css" href="css/savedlists.css">
 
   <!-- jQuery library -->
@@ -34,23 +34,23 @@
         <div style="float:left;"><a class="fas fa-home" id="icon" href="lists.html"></a></div>
         <div class="textalign">Home</div>
       </div>
-  
-  
+
+
       <div class="wrapper" >
           <div class="signout" ><a class="fas fa-sign-out-alt" id="icon2" href="index.html"></a></div>
-          <div class="textalign">Log Out</div> 
+          <div class="textalign">Log Out</div>
       </div>
     </div>
-  
+
 
     <div class="btn-group btn-group-toggle" data-toggle="buttons">
         <label class="btn btn-secondary active btn-outline-secondary" onclick="showSaved(true)">
           <input type="radio" name="options" id="option1" autocomplete="off" checked> My Shopping List
         </label>
-        <label class="btn btn-secondary btn-outline-secondary" onclick="showSaved(false)">
+        <label class="btn btn-secondary btn-outline-secondary" onclick="showSaved(false)" id="recipeTab">
           <input type="radio" name="options" id="option2" autocomplete="off"> My Recipes
         </label>
-        
+
       </div>
 
     <div id="accordion">
@@ -59,7 +59,7 @@
 
 
     <a href="lists.html">
-      <button type="button" class="btn btn-outline-secondary">
+      <button type="button" class="btn btn-outline-secondary" id="back">
         Back
       </button>
     </a>

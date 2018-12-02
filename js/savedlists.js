@@ -50,10 +50,9 @@ function showSaved(bool) {
                         '</ul>'
                 +        '<a href="location.html" class="right" onclick="shopList(this)" id="shop' + i + '"><button type="button" class="btn btn-success">'
                 +        '<i class="fas fa-shopping-cart"></i>'
-                +      '</button></a>'
-
-                + '<a href="ingredients.html" class="right" onclick="shopList(this)" id="shop' + i + '"><button type="button" class="btn btn-primary">'
-                +        '<i class="fas fa-edit"></i>'
+                +      '</button></a> '
+                + '<a href="ingredients.html" class="right" onclick="shopList(this)" id="edit' + i + '"><button type="button" class="btn btn-primary">'
+                +        '<i class="fas fa-pen"></i>'
                 +      '</button></a>';
             }
             else{
@@ -66,7 +65,7 @@ function showSaved(bool) {
                     body+='<li>' + savedLists[i][1][j] + '</li>';
                 }
                 body +='</ul>';
-                
+
                 body += 'Steps: ' + '<ol>';
                 for(var j = 0; j<savedLists[i][2].length; j++){
                     body+='<li>' + savedLists[i][2][j] + '</li>';

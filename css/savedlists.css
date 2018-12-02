@@ -32,7 +32,39 @@ h1 {
 }
 
 .navibar .wrapper .fas {
-  color: #6bb1ff;
+  color: #449afe;
+}
+
+/* Edit */
+ .btn-primary {
+  background-color:	#539bef;
+  border-color: #539bef;
+}
+
+/* Cart */
+.btn-success {
+  background-color:	#a28ad2;
+  border-color:	#a28ad2;
+  margin-left: 5px;
+}
+
+/* Delete */
+.btn-danger {
+  background-color: #ff5a5a;
+  border-color: #ff5a5a;
+}
+
+#back {
+  margin-top: 10px;
+}
+
+#accordion {
+  margin-top: 20px;
+}
+
+#recipeTab {
+  padding-left: 27px;
+  padding-right: 27px;
 }
 
 #icon:hover, #icon2:hover {
