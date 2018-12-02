@@ -65,7 +65,13 @@ h1 {
 #recipeTab {
   padding-left: 27px;
   padding-right: 27px;
+
 }
+.card-head {
+  background-color: #7aaede;
+  color:white;
+}
+
 
 #icon:hover, #icon2:hover {
   color: blue;

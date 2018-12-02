@@ -82,14 +82,12 @@ function showSaved(bool) {
 
             add +=
             '<div class="card template">'
-            + '<div class="card-header" id="headingOne">'
+            + '<div class="card-header card-head" id="headingOne" data-toggle="collapse" data-target="#collapse'
+            + i + '" aria-expanded="true" aria-controls="collapseOne">'
             + '<h5 class="mb-0">'
-            +   '<button class="btn btn-link" data-toggle="collapse" data-target="#collapse'
-            + i + '" aria-expanded="true"'
-            +      'aria-controls="collapseOne">'
+
             +      savedLists[i][0]
 
-            +    '</button>'
             +    container
             +  '</h5>'
             +'</div>'
