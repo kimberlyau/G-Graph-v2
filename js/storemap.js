@@ -50,6 +50,7 @@ function togglePin (elmnt, index) {
           + ' <i>Aisle '
           + rnum
           + '</i>'
+          + '<br><br>'
           + '</div>'
           list.innerHTML += addToList;
         }
