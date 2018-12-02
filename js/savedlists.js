@@ -49,7 +49,7 @@ function showSaved(bool) {
                 }
                 body +=
                         '</ul>'
-                +        '<a href="storemap.html" class="right" onclick="shopList(this)" id="shop' + i + '"><button type="button" class="btn btn-success">'
+                +        '<a href="ingredients.html" class="right" onclick="shopList(this)" id="shop' + i + '"><button type="button" class="btn btn-success">'
                 +        '<i class="fas fa-shopping-cart"></i>'
                 +      '</button></a>'
 
