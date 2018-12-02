@@ -27,7 +27,7 @@ li {
 }
 
 .navibar .wrapper .fas {
-  color: #6bb1ff;
+  color: #449afe;
 }
 
 #icon:hover {
@@ -44,6 +44,9 @@ li {
   /* margin-top: 25%; */
   vertical-align: bottom;
   margin-top: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: 10px;
 }
 
 /* W3 School */
