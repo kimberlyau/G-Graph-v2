@@ -52,6 +52,11 @@ h1 {
 .btn-danger {
   background-color: #ff5a5a;
   border-color: #ff5a5a;
+  margin-top: -7.5px;
+}
+
+h5.mb-0 {
+  margin-top: 10px;
 }
 
 #back {
