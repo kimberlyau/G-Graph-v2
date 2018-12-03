@@ -51,6 +51,11 @@ display: inline-block;
   display: block;
 }
 
+#backtoShop {
+  margin-left: 22%;
+  margin-top: 10px;
+}
+
 #summary {
   text-align: center;
     margin: 0 auto;
